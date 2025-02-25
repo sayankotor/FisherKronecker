@@ -1,0 +1,4 @@
+[core]
+    remote = fisherkronecker
+['remote "fisherkronecker"']
+    url = /workspace-SR003.nfs2/moskovskiy/FisherKronecker
