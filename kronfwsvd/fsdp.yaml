@@ -4,7 +4,7 @@ distributed_type: FSDP
 downcast_bf16: 'no'
 enable_cpu_affinity: false
 fsdp_config:
-  fsdp_activation_checkpointing: false
+  fsdp_activation_checkpointing: true
   fsdp_wrap_policy: SIZED_BASED_WRAP
   min_num_params: 1000000  # <- wrap modules with ≥ 1M params
   fsdp_backward_prefetch: BACKWARD_PRE
