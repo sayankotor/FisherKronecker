@@ -5,6 +5,7 @@ import time
 import concurrent.futures
 import traceback
 
+
 def get_kron_factors(list_of_grads, top_k=10, layer_name="linear", device_id=0):
     def r_matvec(vec, grad_vectors):
         k, m, n = grad_vectors.shape
