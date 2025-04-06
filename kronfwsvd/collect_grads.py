@@ -8,21 +8,29 @@ from datasets import load_dataset
 from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
-    Trainer,
     TrainingArguments,
     DataCollatorForLanguageModeling,
     BitsAndBytesConfig,
 )
+from trl import SFTTrainer
 from safetensors.torch import save_file
 from peft import prepare_model_for_kbit_training, get_peft_model, LoraConfig
 from collections import defaultdict
-import accelerate
-from accelerate import Accelerator
+from datasets import load_dataset, load_from_disk
+import numpy as np
+import os
+from accelerate.accelerator import AcceleratorState
+
+
+def print_once(*args, **kwargs):
+    if AcceleratorState.is_main_process:
+        print(*args, **kwargs)
 
 
 class NoOpOptimizer(torch.optim.Optimizer):
-    def __init__(self):
-        super().__init__([{"params": [], "lr": 0.0}], {})
+    def __init__(self, param):
+        dummy_param = torch.nn.Parameter(torch.zeros(1), requires_grad=False)
+        super().__init__([{"params": [dummy_param], "lr": 0.0}], {})
 
     def step(self, closure=None):
         pass
@@ -31,7 +39,7 @@ class NoOpOptimizer(torch.optim.Optimizer):
         pass
 
 
-class GradientTrainer(Trainer):
+class GradientTrainer(SFTTrainer):
     def training_step(self, model, inputs, num_items):
         inputs = self._prepare_inputs(inputs)
         outputs = model(**inputs)
@@ -40,8 +48,8 @@ class GradientTrainer(Trainer):
         return loss.detach()
 
     def create_optimizer(self):
-        print("[INFO] Using dummy optimizer (no updates)")
-        self.optimizer = NoOpOptimizer()
+        print_once("[INFO] Using dummy optimizer (no updates)")
+        self.optimizer = NoOpOptimizer(next(self.model.parameters()))
         return self.optimizer
 
 
@@ -70,6 +78,7 @@ def collect_grads(
 
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
     tokenizer.pad_token = tokenizer.eos_token
+    tokenizer.padding_side = "left"
 
     quant_config = None
     if use_qlora:
@@ -80,14 +89,13 @@ def collect_grads(
             bnb_4bit_compute_dtype=torch.bfloat16,
         )
 
-    # Set use_cache=False to enable gradient checkpointing properly
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
         quantization_config=quant_config,
         torch_dtype=torch.bfloat16 if use_bf16 else torch.float32,
         low_cpu_mem_usage=True,
-        attn_implementation="flash_attention_2",
-        use_cache=not gradient_checkpointing,  # This is critical for gradient checkpointing
+        attn_implementation="flash_attention_2" if "gemma" not in model_name else "eager",
+        # use_cache=not gradient_checkpointing,  # This is critical for gradient checkpointing
     )
 
     # Configure gradient checkpointing
@@ -98,7 +106,7 @@ def collect_grads(
 
         # Enable gradient checkpointing with non-reentrant mode for better compatibility with FSDP
         if hasattr(model, "gradient_checkpointing_enable"):
-            print("[INFO] Enabling gradient checkpointing with non-reentrant mode")
+            print_once("[INFO] Enabling gradient checkpointing with non-reentrant mode")
             model.gradient_checkpointing_enable()
     else:
         if hasattr(model, "gradient_checkpointing_disable"):
@@ -119,28 +127,37 @@ def collect_grads(
         if re.search(layer_pattern, name):
             param.requires_grad = True
             unfrozen_count += 1
-            print(f"[INFO] Unfrozen: {name}")
+            print_once(f"[INFO] Unfrozen: {name}")
 
     if unfrozen_count == 0:
-        print(f"[WARNING] No parameters matched the pattern '{layer_pattern}'. Check your regex.")
+        print_once(f"[WARNING] No parameters matched the pattern '{layer_pattern}'. Check your regex.")
 
     total = sum(p.numel() for p in model.parameters())
     trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
-    print(f"[INFO] Total params: {total:,} | Trainable: {trainable:,} ({100 * trainable / total:.2f}%)")
+    print_once(f"[INFO] Total params: {total:,} | Trainable: {trainable:,} ({100 * trainable / total:.2f}%)")
 
     if trainable == 0:
-        print("[ERROR] No trainable parameters found. Exiting.")
+        print_once("[ERROR] No trainable parameters found. Exiting.")
         return
 
     model.train()
 
-    print(f"[INFO] Loading dataset: {dataset_name}")
-    ds = load_dataset(dataset_name, dataset_config_name, split="train", num_proc=8)
-    if subsample_size:
-        print(f"[INFO] Subsampling to {subsample_size} examples")
-        ds = ds.shuffle(seed=seed).select(range(subsample_size))
+    subsample_path = os.path.join(dataset_name, "sample", str(subsample_size))
+    # Load or create cached text dataset
+    if os.path.exists(subsample_path):
+        print_once(f"[INFO] Loading cached subsampled dataset from: {dataset_name}/{subsample_size}")
+        ds = load_from_disk(subsample_path)
+    else:
+        print_once(f"[INFO] Loading dataset: {dataset_name}")
+        full_ds = load_dataset(dataset_name, dataset_config_name, split="train")
 
-    print(f"[INFO] Dataset size: {len(ds)} examples")
+        if subsample_size:
+            print_once(f"[INFO] Subsampling {subsample_size} examples...")
+            ds = full_ds.shuffle(seed=seed).select(range(subsample_size))
+        else:
+            ds = full_ds
+        print_once(f"[INFO] Saving subsampled dataset to {subsample_size}")
+        ds.save_to_disk(subsample_path)
 
     def tokenize_function(example):
         return tokenizer(
@@ -151,9 +168,19 @@ def collect_grads(
             return_tensors="pt",
         )
 
-    print("[INFO] Tokenizing dataset")
+    print_once("[INFO] Tokenizing in-memory...")
     tokenized = ds.map(tokenize_function, batched=True, remove_columns=ds.column_names)
     tokenized.set_format(type="torch")
+    print_once(tokenized.features)
+    # Stats
+    lengths = [len(x["input_ids"]) for x in tokenized]
+    total_tokens = sum(lengths)
+    print_once(f"[INFO] Tokenization stats:")
+    print_once(f"       Total examples: {len(tokenized)}")
+    print_once(f"       Total tokens: {total_tokens:,}")
+    print_once(f"       Avg length: {np.mean(lengths):.2f}")
+    print_once(f"       Median length: {np.median(lengths):.2f}")
+    print_once("[INFO] Tokenizing dataset")
 
     data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
 
@@ -164,14 +191,12 @@ def collect_grads(
     def save_grad_hook(name):
         def hook(module, grad_input, grad_output):
             grad = grad_output[0].detach()
-
             if name in grads_sum:
                 grads_sum[name] += grad.sum(dim=0).to(device=grads_sum[name].device)
             else:
                 grads_sum[name] = grad.sum(dim=0).clone()
-
             grads_count[name] += grad.shape[0]
-            del grad
+            del grad, grad_input, grad_output
 
         return hook
 
@@ -181,7 +206,7 @@ def collect_grads(
         if re.search(layer_pattern, name):
             matched_modules.append((name, module))
 
-    print(f"[INFO] Registered {len(matched_modules)} modules for gradient collection")
+    print_once(f"[INFO] Registered {len(matched_modules)} modules for gradient collection")
     for name, module in matched_modules:
         module.register_full_backward_hook(save_grad_hook(name))
 
@@ -204,6 +229,7 @@ def collect_grads(
         save_steps=0,
         save_total_limit=0,
         gradient_checkpointing=gradient_checkpointing,
+        max_grad_norm=0.0,
     )
 
     # Configure gradient checkpointing parameters when enabled
@@ -217,32 +243,31 @@ def collect_grads(
         data_collator=data_collator,
     )
 
-    print("[INFO] Starting training loop")
+    print_once("[INFO] Starting training loop")
     trainer.train()
 
-    print("[INFO] Processing gradients")
+    print_once("[INFO] Processing gradients")
     grads_dict = {}
     for name in grads_sum:
         grads_dict[name] = grads_sum[name] / grads_count[name]
         grads_sum[name] = grads_sum[name].to("cpu")
-
     del grads_sum
 
     grad_file = os.path.join(output_path, "grads.safetensors")
-    print(f"[INFO] Saving gradients to {grad_file}")
+    print_once(f"[INFO] Saving gradients to {grad_file}")
     save_file(grads_dict, grad_file)
 
     if collect_weights:
-        print("[INFO] Collecting weights")
+        print_once("[INFO] Collecting weights")
         for name, module in matched_modules:
             for param_name, param in module.named_parameters():
                 weights_dict[f"{name}.{param_name}"] = param.detach().cpu()
 
         weight_file = os.path.join(output_path, "weights.safetensors")
-        print(f"[INFO] Saving weights to {weight_file}")
+        print_once(f"[INFO] Saving weights to {weight_file}")
         save_file(weights_dict, weight_file)
 
-    print("[INFO] Collection complete")
+    print_once("[INFO] Collection complete")
 
 
 def main():
@@ -291,7 +316,4 @@ def main():
 
 
 if __name__ == "__main__":
-    import accelerate
-    from accelerate import launchers
-
     main()

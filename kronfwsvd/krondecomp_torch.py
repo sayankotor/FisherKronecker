@@ -4,7 +4,7 @@ import torch
 def get_kron_factors_torch(list_of_grads, top_k=10):
     # Ensure everything is on GPU
     device = list_of_grads[0].device
-    dtype = list_of_grads[0].dtype
+    list_of_grads[0].dtype
 
     m, n = list_of_grads[0].shape
 
