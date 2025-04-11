@@ -4,22 +4,20 @@ import re
 import torch
 import random
 import numpy as np
-from datasets import load_dataset
+from datasets import load_dataset, load_from_disk
 from transformers import (
+    Trainer,
     AutoModelForCausalLM,
     AutoTokenizer,
     TrainingArguments,
     DataCollatorForLanguageModeling,
     BitsAndBytesConfig,
 )
-from trl import SFTTrainer
 from safetensors.torch import save_file
 from peft import prepare_model_for_kbit_training, get_peft_model, LoraConfig
-from collections import defaultdict
-from datasets import load_dataset, load_from_disk
-import numpy as np
-import os
 from accelerate.accelerator import AcceleratorState
+import threading
+import queue
 
 
 def print_once(*args, **kwargs):
@@ -39,13 +37,42 @@ class NoOpOptimizer(torch.optim.Optimizer):
         pass
 
 
-class GradientTrainer(SFTTrainer):
+class GradientTrainer(Trainer):
+    def __init__(self, *args, layer_pattern=None, step_counter=None, save_queue=None, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.layer_pattern = layer_pattern
+        self.step_counter = step_counter
+        self.save_queue = save_queue
+        self._grad_buffer = {}
+        self._register_hooks()
+
+    def _register_hooks(self):
+        for name, module in self.model.named_modules():
+            if re.search(self.layer_pattern, name):
+                module.register_full_backward_hook(self._make_hook(name))
+
+    def _make_hook(self, name):
+        def hook(module, grad_input, grad_output):
+            if grad_output is None or grad_output[0] is None:
+                return
+            grad = grad_output[0].detach().sum(dim=0)
+            if name in self._grad_buffer:
+                self._grad_buffer[name] += grad
+            else:
+                self._grad_buffer[name] = grad.clone()
+        return hook
+
     def training_step(self, model, inputs, num_items):
-        inputs = self._prepare_inputs(inputs)
-        outputs = model(**inputs)
-        loss = outputs.loss
-        self.accelerator.backward(loss)
-        return loss.detach()
+        loss = super().training_step(model, inputs, num_items)
+        if (self.state.global_step + 1) % self.args.gradient_accumulation_steps == 0:
+            grad_dict = {
+                name: tensor / self.args.gradient_accumulation_steps
+                for name, tensor in self._grad_buffer.items()
+            }
+            self.save_queue.put((self.step_counter[0], grad_dict))
+            self._grad_buffer.clear()
+            self.step_counter[0] += 1
+        return loss
 
     def create_optimizer(self):
         print_once("[INFO] Using dummy optimizer (no updates)")
@@ -95,16 +122,12 @@ def collect_grads(
         torch_dtype=torch.bfloat16 if use_bf16 else torch.float32,
         low_cpu_mem_usage=True,
         attn_implementation="flash_attention_2" if "gemma" not in model_name else "eager",
-        # use_cache=not gradient_checkpointing,  # This is critical for gradient checkpointing
     )
 
-    # Configure gradient checkpointing
     if gradient_checkpointing:
         if hasattr(model.config, "gradient_checkpointing"):
             model.config.gradient_checkpointing = True
             model.config.use_cache = False
-
-        # Enable gradient checkpointing with non-reentrant mode for better compatibility with FSDP
         if hasattr(model, "gradient_checkpointing_enable"):
             print_once("[INFO] Enabling gradient checkpointing with non-reentrant mode")
             model.gradient_checkpointing_enable()
@@ -117,11 +140,9 @@ def collect_grads(
         lora_config = LoraConfig(task_type="CAUSAL_LM", r=8, lora_alpha=32, lora_dropout=0.1, bias="none")
         model = get_peft_model(model, lora_config)
 
-    # Freeze all parameters
     for param in model.parameters():
         param.requires_grad = False
 
-    # Unfreeze matching parameters
     unfrozen_count = 0
     for name, param in model.named_parameters():
         if re.search(layer_pattern, name):
@@ -143,7 +164,6 @@ def collect_grads(
     model.train()
 
     subsample_path = os.path.join(dataset_name, "sample", str(subsample_size))
-    # Load or create cached text dataset
     if os.path.exists(subsample_path):
         print_once(f"[INFO] Loading cached subsampled dataset from: {dataset_name}/{subsample_size}")
         ds = load_from_disk(subsample_path)
@@ -171,7 +191,7 @@ def collect_grads(
     print_once("[INFO] Tokenizing in-memory...")
     tokenized = ds.map(tokenize_function, batched=True, remove_columns=ds.column_names)
     tokenized.set_format(type="torch")
-    print_once(tokenized.features)
+    print_once("[INFO] Tokenization complete")
     # Stats
     lengths = [len(x["input_ids"]) for x in tokenized]
     total_tokens = sum(lengths)
@@ -180,47 +200,41 @@ def collect_grads(
     print_once(f"       Total tokens: {total_tokens:,}")
     print_once(f"       Avg length: {np.mean(lengths):.2f}")
     print_once(f"       Median length: {np.median(lengths):.2f}")
-    print_once("[INFO] Tokenizing dataset")
 
     data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
 
-    weights_dict = {}
-    grads_sum = {}
-    grads_count = defaultdict(int)
+    save_queue = queue.Queue()
+    step_counter = [0]
 
-    def save_grad_hook(name):
-        def hook(module, grad_input, grad_output):
-            grad = grad_output[0].detach()
-            if name in grads_sum:
-                grads_sum[name] += grad.sum(dim=0).to(device=grads_sum[name].device)
-            else:
-                grads_sum[name] = grad.sum(dim=0).clone()
-            grads_count[name] += grad.shape[0]
-            del grad, grad_input, grad_output
+    def save_worker():
+        print_once("[INFO] Save worker started")
+        while True:
+            item = save_queue.get()
+            if item is None:
+                break
+            batch_idx, grads = item
+            grads_cpu = {
+                k: v.detach().to("cpu", non_blocking=True).pin_memory()
+                for k, v in grads.items()
+            }
+            grad_file = os.path.join(output_path, f"grads_batch_{batch_idx:06}.safetensors")
+            save_file(grads_cpu, grad_file)
+            save_queue.task_done()
+        print_once("[INFO] Save worker finished")
 
-        return hook
+    save_thread = threading.Thread(target=save_worker, daemon=True)
+    save_thread.start()
 
-    # Match modules by regex pattern
-    matched_modules = []
-    for name, module in model.named_modules():
-        if re.search(layer_pattern, name):
-            matched_modules.append((name, module))
-
-    print_once(f"[INFO] Registered {len(matched_modules)} modules for gradient collection")
-    for name, module in matched_modules:
-        module.register_full_backward_hook(save_grad_hook(name))
-
-    # Set up training arguments with appropriate gradient checkpointing settings
     training_args = TrainingArguments(
         output_dir=output_path,
         per_device_train_batch_size=batch_size,
         gradient_accumulation_steps=gradient_accumulation_steps,
         num_train_epochs=1,
         max_steps=max_steps if max_steps is not None else -1,
-        logging_steps=10,
+        logging_steps=1,
         bf16=use_bf16,
         fp16=not use_bf16,
-        report_to=["wandb"],
+        report_to=[],
         dataloader_num_workers=8,
         dataloader_prefetch_factor=4,
         dataloader_pin_memory=True,
@@ -232,7 +246,6 @@ def collect_grads(
         max_grad_norm=0.0,
     )
 
-    # Configure gradient checkpointing parameters when enabled
     if gradient_checkpointing:
         training_args.gradient_checkpointing_kwargs = {"use_reentrant": False}
 
@@ -241,33 +254,18 @@ def collect_grads(
         args=training_args,
         train_dataset=tokenized,
         data_collator=data_collator,
+        layer_pattern=layer_pattern,
+        step_counter=step_counter,
+        save_queue=save_queue,
     )
 
     print_once("[INFO] Starting training loop")
     trainer.train()
 
-    print_once("[INFO] Processing gradients")
-    grads_dict = {}
-    for name in grads_sum:
-        grads_dict[name] = grads_sum[name] / grads_count[name]
-        grads_sum[name] = grads_sum[name].to("cpu")
-    del grads_sum
-
-    grad_file = os.path.join(output_path, "grads.safetensors")
-    print_once(f"[INFO] Saving gradients to {grad_file}")
-    save_file(grads_dict, grad_file)
-
-    if collect_weights:
-        print_once("[INFO] Collecting weights")
-        for name, module in matched_modules:
-            for param_name, param in module.named_parameters():
-                weights_dict[f"{name}.{param_name}"] = param.detach().cpu()
-
-        weight_file = os.path.join(output_path, "weights.safetensors")
-        print_once(f"[INFO] Saving weights to {weight_file}")
-        save_file(weights_dict, weight_file)
-
-    print_once("[INFO] Collection complete")
+    print_once("[INFO] Waiting for gradient save thread to finish...")
+    save_queue.put(None)
+    save_thread.join()
+    print_once("[INFO] All gradients saved.")
 
 
 def main():
@@ -280,12 +278,8 @@ def main():
     parser.add_argument("--batch_size", type=int, default=4, help="Batch size for training")
     parser.add_argument("--gradient_accumulation_steps", type=int, default=1, help="Gradient accumulation steps")
     parser.add_argument("--layer_pattern", type=str, required=True, help="Regex pattern to match layer/module names")
-    parser.add_argument(
-        "--max_steps", type=int, default=None, help="Max training steps. Default: run through entire dataset."
-    )
-    parser.add_argument(
-        "--max_seq_length", type=int, default=2048, help="Max sequence length for tokenization. Default: 2048."
-    )
+    parser.add_argument("--max_steps", type=int, default=None, help="Max training steps. Default: run through entire dataset.")
+    parser.add_argument("--max_seq_length", type=int, default=2048, help="Max sequence length for tokenization. Default: 2048.")
     parser.add_argument("--seed", type=int, default=42, help="Random seed")
     parser.add_argument("--bf16", action="store_true", default=True, help="Use bfloat16 precision")
     parser.add_argument("--use_qlora", action="store_true", help="Use QLoRA for quantization")
