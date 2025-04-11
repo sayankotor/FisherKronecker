@@ -3,6 +3,7 @@ export WANDB_PROJECT="fisher-kronecker"
 export WANDB_ENTITY="dondo_sss"
 
 MODEL_NAME="unsloth/Llama-3.2-1B-Instruct"
+# MODEL_NAME="unsloth/Llama-3.1-8B-Instruct"
 # MODEL_NAME="google/gemma-3-12b-it"
 # MODEL_NAME="Qwen/Qwen2.5-14B-Instruct-1M"
 # MODEL_NAME="Qwen/Qwen2.5-1.5B-Instruct"

@@ -18,6 +18,8 @@ from peft import prepare_model_for_kbit_training, get_peft_model, LoraConfig
 from accelerate.accelerator import AcceleratorState
 import threading
 import queue
+from concurrent.futures import ThreadPoolExecutor
+import time
 
 
 def print_once(*args, **kwargs):
@@ -44,40 +46,143 @@ class GradientTrainer(Trainer):
         self.step_counter = step_counter
         self.save_queue = save_queue
         self._grad_buffer = {}
+        self._current_acc_step = 0
         self._register_hooks()
 
     def _register_hooks(self):
         for name, module in self.model.named_modules():
             if re.search(self.layer_pattern, name):
                 module.register_full_backward_hook(self._make_hook(name))
+                print_once(f"[DEBUG] Registered hook for module: {name}")
 
     def _make_hook(self, name):
         def hook(module, grad_input, grad_output):
             if grad_output is None or grad_output[0] is None:
                 return
+            # Sum across batch dimension
             grad = grad_output[0].detach().sum(dim=0)
+
+            # Add to buffer with in-place op if possible
             if name in self._grad_buffer:
-                self._grad_buffer[name] += grad
+                self._grad_buffer[name].add_(grad)
             else:
                 self._grad_buffer[name] = grad.clone()
+
         return hook
 
     def training_step(self, model, inputs, num_items):
+        # Call superclass method to perform forward/backward
         loss = super().training_step(model, inputs, num_items)
-        if (self.state.global_step + 1) % self.args.gradient_accumulation_steps == 0:
+
+        # Increment our step counter
+        self._current_acc_step += 1
+        print_once(
+            f"[DEBUG] Step {self.state.global_step}, acc_step {self._current_acc_step}/{self.args.gradient_accumulation_steps}"
+        )
+
+        # Check if we've reached the end of gradient accumulation
+        if self._current_acc_step >= self.args.gradient_accumulation_steps:
+            print_once(f"[INFO] Saving gradients for batch {self.step_counter[0]}")
+
+            # Process and save accumulated gradients
             grad_dict = {
-                name: tensor / self.args.gradient_accumulation_steps
+                name: tensor.div(self.args.gradient_accumulation_steps).clone()  # Scale and clone
                 for name, tensor in self._grad_buffer.items()
             }
+
+            # Send for saving
             self.save_queue.put((self.step_counter[0], grad_dict))
+
+            # Reset buffer and counter
             self._grad_buffer.clear()
+            self._current_acc_step = 0
             self.step_counter[0] += 1
+
         return loss
 
     def create_optimizer(self):
         print_once("[INFO] Using dummy optimizer (no updates)")
         self.optimizer = NoOpOptimizer(next(self.model.parameters()))
         return self.optimizer
+
+
+def save_gradient_worker(save_queue, output_path, flush_interval=5):
+    """Worker thread function to save gradients to disk"""
+    print_once("[INFO] Save worker started")
+    last_flush_time = time.time()
+    pending_saves = []
+    save_count = 0
+
+    while True:
+        try:
+            # Try to get an item with timeout to allow periodic flushing
+            try:
+                item = save_queue.get(timeout=1.0)
+                if item is None:  # Poison pill
+                    break
+            except queue.Empty:
+                # No new items, check if we should flush pending saves
+                if pending_saves and time.time() - last_flush_time > flush_interval:
+                    for batch_idx, grads in pending_saves:
+                        _save_gradient_batch(batch_idx, grads, output_path)
+                    pending_saves.clear()
+                    last_flush_time = time.time()
+                continue
+
+            # Process the gradient save
+            batch_idx, grads = item
+            pending_saves.append((batch_idx, grads))
+
+            # If we have enough pending saves or it's been too long, flush them
+            if len(pending_saves) >= 3 or time.time() - last_flush_time > flush_interval:
+                for b_idx, g in pending_saves:
+                    _save_gradient_batch(b_idx, g, output_path)
+                    save_count += 1
+                pending_saves.clear()
+                last_flush_time = time.time()
+                print_once(f"[INFO] Saved {save_count} gradient batches so far")
+
+            save_queue.task_done()
+
+        except Exception as e:
+            print_once(f"[ERROR] Exception in save worker: {e}")
+            import traceback
+
+            traceback.print_exc()
+
+    # Final flush of any remaining items
+    for batch_idx, grads in pending_saves:
+        _save_gradient_batch(batch_idx, grads, output_path)
+        save_count += 1
+
+    print_once(f"[INFO] Save worker finished. Total saved batches: {save_count}")
+
+
+def _save_gradient_batch(batch_idx, grads, output_path):
+    """Helper function to save a single batch of gradients"""
+    try:
+        # Create a new dict for CPU tensors
+        grads_cpu = {}
+
+        # Process each gradient tensor
+        for k, v in grads.items():
+            # Move to CPU and convert to bfloat16
+            cpu_tensor = v.detach().cpu().to(dtype=torch.bfloat16)
+            grads_cpu[k] = cpu_tensor
+
+        # Save to disk
+        grad_file = os.path.join(output_path, f"grads_batch_{batch_idx:06}.safetensors")
+        save_file(grads_cpu, grad_file)
+        print_once(f"[DEBUG] Saved gradients to {grad_file}")
+
+        # Clean up
+        del grads_cpu
+
+    except Exception as e:
+        print_once(f"[ERROR] Failed to save gradient batch {batch_idx}: {e}")
+        import traceback
+
+        traceback.print_exc()
 
 
 def collect_grads(
@@ -97,11 +202,20 @@ def collect_grads(
     subsample_size,
     collect_weights,
     gradient_checkpointing,
+    num_save_workers=2,
+    compression_level=1,
 ):
     os.makedirs(output_path, exist_ok=True)
     torch.manual_seed(seed)
     random.seed(seed)
     np.random.seed(seed)
+
+    print_once(f"[INFO] Starting gradient collection with:")
+    print_once(f"       - Model: {model_name}")
+    print_once(f"       - Batch size: {batch_size}")
+    print_once(f"       - Gradient accumulation steps: {gradient_accumulation_steps}")
+    print_once(f"       - Layer pattern: {layer_pattern}")
+    print_once(f"       - Output path: {output_path}")
 
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
     tokenizer.pad_token = tokenizer.eos_token
@@ -176,7 +290,8 @@ def collect_grads(
             ds = full_ds.shuffle(seed=seed).select(range(subsample_size))
         else:
             ds = full_ds
-        print_once(f"[INFO] Saving subsampled dataset to {subsample_size}")
+        print_once(f"[INFO] Saving subsampled dataset to {subsample_path}")
+        os.makedirs(os.path.dirname(subsample_path), exist_ok=True)
         ds.save_to_disk(subsample_path)
 
     def tokenize_function(example):
@@ -192,6 +307,7 @@ def collect_grads(
     tokenized = ds.map(tokenize_function, batched=True, remove_columns=ds.column_names)
     tokenized.set_format(type="torch")
     print_once("[INFO] Tokenization complete")
+
     # Stats
     lengths = [len(x["input_ids"]) for x in tokenized]
     total_tokens = sum(lengths)
@@ -203,47 +319,36 @@ def collect_grads(
 
     data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
 
-    save_queue = queue.Queue()
+    # Configure save queue with increased capacity
+    save_queue = queue.Queue(maxsize=max(32, num_save_workers * 4))
     step_counter = [0]
 
-    def save_worker():
-        print_once("[INFO] Save worker started")
-        while True:
-            item = save_queue.get()
-            if item is None:
-                break
-            batch_idx, grads = item
-            grads_cpu = {
-                k: v.detach().to("cpu", non_blocking=True).pin_memory()
-                for k, v in grads.items()
-            }
-            grad_file = os.path.join(output_path, f"grads_batch_{batch_idx:06}.safetensors")
-            save_file(grads_cpu, grad_file)
-            save_queue.task_done()
-        print_once("[INFO] Save worker finished")
+    # Start save workers
+    save_threads = []
+    for _ in range(num_save_workers):
+        save_thread = threading.Thread(target=save_gradient_worker, args=(save_queue, output_path), daemon=True)
+        save_thread.start()
+        save_threads.append(save_thread)
+    print_once(f"[INFO] Started {num_save_workers} save worker threads")
 
-    save_thread = threading.Thread(target=save_worker, daemon=True)
-    save_thread.start()
-
+    # Training arguments
     training_args = TrainingArguments(
         output_dir=output_path,
         per_device_train_batch_size=batch_size,
         gradient_accumulation_steps=gradient_accumulation_steps,
         num_train_epochs=1,
         max_steps=max_steps if max_steps is not None else -1,
-        logging_steps=1,
+        logging_steps=10,
         bf16=use_bf16,
         fp16=not use_bf16,
         report_to=[],
-        dataloader_num_workers=8,
-        dataloader_prefetch_factor=4,
+        dataloader_num_workers=4,
         dataloader_pin_memory=True,
-        dataloader_persistent_workers=True,
         save_strategy="no",
         save_steps=0,
         save_total_limit=0,
         gradient_checkpointing=gradient_checkpointing,
-        max_grad_norm=0.0,
+        max_grad_norm=0.0,  # Disable gradient clipping
     )
 
     if gradient_checkpointing:
@@ -261,11 +366,21 @@ def collect_grads(
 
     print_once("[INFO] Starting training loop")
     trainer.train()
+    print_once("[INFO] Training finished. Waiting for gradient save queue to empty...")
 
-    print_once("[INFO] Waiting for gradient save thread to finish...")
-    save_queue.put(None)
-    save_thread.join()
-    print_once("[INFO] All gradients saved.")
+    # Wait for the queue to be processed
+    save_queue.join()
+
+    # Now send termination signals to workers
+    print_once("[INFO] Shutting down save workers...")
+    for _ in range(num_save_workers):
+        save_queue.put(None)  # Poison pill for each worker
+
+    # Wait for all save threads to finish
+    for thread in save_threads:
+        thread.join()
+
+    print_once(f"[INFO] All gradients saved. Total batches: {step_counter[0]}")
 
 
 def main():
@@ -278,14 +393,26 @@ def main():
     parser.add_argument("--batch_size", type=int, default=4, help="Batch size for training")
     parser.add_argument("--gradient_accumulation_steps", type=int, default=1, help="Gradient accumulation steps")
     parser.add_argument("--layer_pattern", type=str, required=True, help="Regex pattern to match layer/module names")
-    parser.add_argument("--max_steps", type=int, default=None, help="Max training steps. Default: run through entire dataset.")
-    parser.add_argument("--max_seq_length", type=int, default=2048, help="Max sequence length for tokenization. Default: 2048.")
+    parser.add_argument(
+        "--max_steps", type=int, default=None, help="Max training steps. Default: run through entire dataset."
+    )
+    parser.add_argument(
+        "--max_seq_length", type=int, default=2048, help="Max sequence length for tokenization. Default: 2048."
+    )
     parser.add_argument("--seed", type=int, default=42, help="Random seed")
     parser.add_argument("--bf16", action="store_true", default=True, help="Use bfloat16 precision")
     parser.add_argument("--use_qlora", action="store_true", help="Use QLoRA for quantization")
     parser.add_argument("--subsample_size", type=int, default=None, help="Subsample dataset to this size")
     parser.add_argument("--collect_weights", action="store_true", default=False, help="Also collect weights")
     parser.add_argument("--gradient_checkpointing", action="store_true", default=False, help="Enable gradient checkpointing")
+    parser.add_argument("--num_save_workers", type=int, default=2, help="Number of parallel save workers")
+    parser.add_argument(
+        "--compression_level",
+        type=int,
+        default=1,
+        choices=[0, 1, 2],
+        help="Compression level for saved gradients (0=none, 1=bfloat16, 2=int8)",
+    )
 
     args = parser.parse_args()
 
@@ -306,6 +433,8 @@ def main():
         subsample_size=args.subsample_size,
         collect_weights=args.collect_weights,
         gradient_checkpointing=args.gradient_checkpointing,
+        num_save_workers=args.num_save_workers,
+        compression_level=args.compression_level,
     )
 
 
