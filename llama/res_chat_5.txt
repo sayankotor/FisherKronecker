@@ -1,0 +1,786 @@
+{'lm_head': 1, 'model.layers.31.mlp.gate_proj': 1, 'model.layers.31.mlp.up_proj': 1, 'model.layers.31.mlp.down_proj': 1, 'model.layers.31.self_attn.q_proj': 1, 'model.layers.31.self_attn.k_proj': 1, 'model.layers.31.self_attn.v_proj': 1, 'model.layers.31.self_attn.o_proj': 1, 'model.layers.30.mlp.gate_proj': 1, 'model.layers.30.mlp.up_proj': 1, 'model.layers.30.mlp.down_proj': 1, 'model.layers.30.self_attn.q_proj': 1, 'model.layers.30.self_attn.k_proj': 1, 'model.layers.30.self_attn.v_proj': 1, 'model.layers.30.self_attn.o_proj': 1, 'model.layers.29.mlp.gate_proj': 0.5, 'model.layers.29.mlp.up_proj': 1, 'model.layers.29.mlp.down_proj': 1, 'model.layers.29.self_attn.q_proj': 1, 'model.layers.29.self_attn.k_proj': 1, 'model.layers.29.self_attn.v_proj': 1, 'model.layers.29.self_attn.o_proj': 1, 'model.layers.28.mlp.gate_proj': 0.5, 'model.layers.28.mlp.up_proj': 1, 'model.layers.28.mlp.down_proj': 1, 'model.layers.28.self_attn.q_proj': 1, 'model.layers.28.self_attn.k_proj': 1, 'model.layers.28.self_attn.v_proj': 1, 'model.layers.28.self_attn.o_proj': 1, 'model.layers.27.mlp.gate_proj': 1, 'model.layers.27.mlp.up_proj': 1, 'model.layers.27.mlp.down_proj': 0.5, 'model.layers.27.self_attn.q_proj': 1, 'model.layers.27.self_attn.k_proj': 1, 'model.layers.27.self_attn.v_proj': 1, 'model.layers.27.self_attn.o_proj': 1, 'model.layers.26.mlp.gate_proj': 1, 'model.layers.26.mlp.up_proj': 0.5, 'model.layers.26.mlp.down_proj': 1, 'model.layers.26.self_attn.q_proj': 1, 'model.layers.26.self_attn.k_proj': 1, 'model.layers.26.self_attn.v_proj': 1, 'model.layers.26.self_attn.o_proj': 1, 'model.layers.25.mlp.gate_proj': 1, 'model.layers.25.mlp.up_proj': 0.5, 'model.layers.25.mlp.down_proj': 1, 'model.layers.25.self_attn.q_proj': 1, 'model.layers.25.self_attn.k_proj': 1, 'model.layers.25.self_attn.v_proj': 1, 'model.layers.25.self_attn.o_proj': 1, 'model.layers.24.mlp.gate_proj': 1, 'model.layers.24.mlp.up_proj': 0.5, 'model.layers.24.mlp.down_proj': 1, 'model.layers.24.self_attn.q_proj': 1, 'model.layers.24.self_attn.k_proj': 1, 'model.layers.24.self_attn.v_proj': 1, 'model.layers.24.self_attn.o_proj': 1, 'model.layers.23.mlp.gate_proj': 0.5, 'model.layers.23.mlp.up_proj': 1, 'model.layers.23.mlp.down_proj': 1, 'model.layers.23.self_attn.q_proj': 1, 'model.layers.23.self_attn.k_proj': 1, 'model.layers.23.self_attn.v_proj': 1, 'model.layers.23.self_attn.o_proj': 1, 'model.layers.22.mlp.gate_proj': 1, 'model.layers.22.mlp.up_proj': 0.5, 'model.layers.22.mlp.down_proj': 1, 'model.layers.22.self_attn.q_proj': 1, 'model.layers.22.self_attn.k_proj': 1, 'model.layers.22.self_attn.v_proj': 1, 'model.layers.22.self_attn.o_proj': 1, 'model.layers.21.mlp.gate_proj': 1, 'model.layers.21.mlp.up_proj': 0.5, 'model.layers.21.mlp.down_proj': 1, 'model.layers.21.self_attn.q_proj': 1, 'model.layers.21.self_attn.k_proj': 1, 'model.layers.21.self_attn.v_proj': 1, 'model.layers.21.self_attn.o_proj': 1, 'model.layers.20.mlp.gate_proj': 0.5, 'model.layers.20.mlp.up_proj': 1, 'model.layers.20.mlp.down_proj': 1, 'model.layers.20.self_attn.q_proj': 1, 'model.layers.20.self_attn.k_proj': 1, 'model.layers.20.self_attn.v_proj': 1, 'model.layers.20.self_attn.o_proj': 1, 'model.layers.19.mlp.gate_proj': 1, 'model.layers.19.mlp.up_proj': 1, 'model.layers.19.mlp.down_proj': 1, 'model.layers.19.self_attn.q_proj': 0.3, 'model.layers.19.self_attn.k_proj': 1, 'model.layers.19.self_attn.v_proj': 1, 'model.layers.19.self_attn.o_proj': 1, 'model.layers.18.mlp.gate_proj': 1, 'model.layers.18.mlp.up_proj': 0.5, 'model.layers.18.mlp.down_proj': 1, 'model.layers.18.self_attn.q_proj': 1, 'model.layers.18.self_attn.k_proj': 1, 'model.layers.18.self_attn.v_proj': 1, 'model.layers.18.self_attn.o_proj': 1, 'model.layers.17.mlp.gate_proj': 1, 'model.layers.17.mlp.up_proj': 1, 'model.layers.17.mlp.down_proj': 1, 'model.layers.17.self_attn.q_proj': 0.3, 'model.layers.17.self_attn.k_proj': 1, 'model.layers.17.self_attn.v_proj': 1, 'model.layers.17.self_attn.o_proj': 1, 'model.layers.16.mlp.gate_proj': 1, 'model.layers.16.mlp.up_proj': 1, 'model.layers.16.mlp.down_proj': 1, 'model.layers.16.self_attn.q_proj': 1, 'model.layers.16.self_attn.k_proj': 1, 'model.layers.16.self_attn.v_proj': 0.3, 'model.layers.16.self_attn.o_proj': 1, 'model.layers.15.mlp.gate_proj': 1, 'model.layers.15.mlp.up_proj': 1, 'model.layers.15.mlp.down_proj': 1, 'model.layers.15.self_attn.q_proj': 0.3, 'model.layers.15.self_attn.k_proj': 1, 'model.layers.15.self_attn.v_proj': 1, 'model.layers.15.self_attn.o_proj': 1, 'model.layers.14.mlp.gate_proj': 1, 'model.layers.14.mlp.up_proj': 1, 'model.layers.14.mlp.down_proj': 1, 'model.layers.14.self_attn.q_proj': 1, 'model.layers.14.self_attn.k_proj': 1, 'model.layers.14.self_attn.v_proj': 1, 'model.layers.14.self_attn.o_proj': 1, 'model.layers.13.mlp.gate_proj': 1, 'model.layers.13.mlp.up_proj': 1, 'model.layers.13.mlp.down_proj': 1, 'model.layers.13.self_attn.q_proj': 1, 'model.layers.13.self_attn.k_proj': 1, 'model.layers.13.self_attn.v_proj': 1, 'model.layers.13.self_attn.o_proj': 1, 'model.layers.12.mlp.gate_proj': 1, 'model.layers.12.mlp.up_proj': 1, 'model.layers.12.mlp.down_proj': 1, 'model.layers.12.self_attn.q_proj': 0.3, 'model.layers.12.self_attn.k_proj': 1, 'model.layers.12.self_attn.v_proj': 1, 'model.layers.12.self_attn.o_proj': 1, 'model.layers.11.mlp.gate_proj': 1, 'model.layers.11.mlp.up_proj': 1, 'model.layers.11.mlp.down_proj': 1, 'model.layers.11.self_attn.q_proj': 1, 'model.layers.11.self_attn.k_proj': 1, 'model.layers.11.self_attn.v_proj': 1, 'model.layers.11.self_attn.o_proj': 1, 'model.layers.10.mlp.gate_proj': 1, 'model.layers.10.mlp.up_proj': 1, 'model.layers.10.mlp.down_proj': 1, 'model.layers.10.self_attn.q_proj': 1, 'model.layers.10.self_attn.k_proj': 1, 'model.layers.10.self_attn.v_proj': 1, 'model.layers.10.self_attn.o_proj': 1, 'model.layers.9.mlp.gate_proj': 1, 'model.layers.9.mlp.up_proj': 1, 'model.layers.9.mlp.down_proj': 1, 'model.layers.9.self_attn.q_proj': 1, 'model.layers.9.self_attn.k_proj': 1, 'model.layers.9.self_attn.v_proj': 1, 'model.layers.9.self_attn.o_proj': 1, 'model.layers.8.mlp.gate_proj': 1, 'model.layers.8.mlp.up_proj': 1, 'model.layers.8.mlp.down_proj': 1, 'model.layers.8.self_attn.q_proj': 1, 'model.layers.8.self_attn.k_proj': 1, 'model.layers.8.self_attn.v_proj': 1, 'model.layers.8.self_attn.o_proj': 1, 'model.layers.7.mlp.gate_proj': 1, 'model.layers.7.mlp.up_proj': 1, 'model.layers.7.mlp.down_proj': 1, 'model.layers.7.self_attn.q_proj': 1, 'model.layers.7.self_attn.k_proj': 1, 'model.layers.7.self_attn.v_proj': 1, 'model.layers.7.self_attn.o_proj': 1, 'model.layers.6.mlp.gate_proj': 1, 'model.layers.6.mlp.up_proj': 1, 'model.layers.6.mlp.down_proj': 1, 'model.layers.6.self_attn.q_proj': 1, 'model.layers.6.self_attn.k_proj': 1, 'model.layers.6.self_attn.v_proj': 1, 'model.layers.6.self_attn.o_proj': 1, 'model.layers.5.mlp.gate_proj': 1, 'model.layers.5.mlp.up_proj': 1, 'model.layers.5.mlp.down_proj': 1, 'model.layers.5.self_attn.q_proj': 1, 'model.layers.5.self_attn.k_proj': 1, 'model.layers.5.self_attn.v_proj': 1, 'model.layers.5.self_attn.o_proj': 1, 'model.layers.4.mlp.gate_proj': 1, 'model.layers.4.mlp.up_proj': 1, 'model.layers.4.mlp.down_proj': 1, 'model.layers.4.self_attn.q_proj': 1, 'model.layers.4.self_attn.k_proj': 1, 'model.layers.4.self_attn.v_proj': 1, 'model.layers.4.self_attn.o_proj': 1, 'model.layers.3.mlp.gate_proj': 1, 'model.layers.3.mlp.up_proj': 1, 'model.layers.3.mlp.down_proj': 1, 'model.layers.3.self_attn.q_proj': 1, 'model.layers.3.self_attn.k_proj': 1, 'model.layers.3.self_attn.v_proj': 1, 'model.layers.3.self_attn.o_proj': 1, 'model.layers.2.mlp.gate_proj': 1, 'model.layers.2.mlp.up_proj': 1, 'model.layers.2.mlp.down_proj': 1, 'model.layers.2.self_attn.q_proj': 1, 'model.layers.2.self_attn.k_proj': 1, 'model.layers.2.self_attn.v_proj': 1, 'model.layers.2.self_attn.o_proj': 1, 'model.layers.1.mlp.gate_proj': 1, 'model.layers.1.mlp.up_proj': 1, 'model.layers.1.mlp.down_proj': 1, 'model.layers.1.self_attn.q_proj': 1, 'model.layers.1.self_attn.k_proj': 1, 'model.layers.1.self_attn.v_proj': 1, 'model.layers.1.self_attn.o_proj': 1, 'model.layers.0.mlp.gate_proj': 1, 'model.layers.0.mlp.up_proj': 1, 'model.layers.0.mlp.down_proj': 1, 'model.layers.0.self_attn.q_proj': 1, 'model.layers.0.self_attn.k_proj': 1, 'model.layers.0.self_attn.v_proj': 1, 'model.layers.0.self_attn.o_proj': 1}2025-04-27 00:52:30,188 - INFO - Loading model: unsloth/llama-2-7b-chat
+
+[2025-04-27 00:52:35,527] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Warning: The cache directory for DeepSpeed Triton autotune, /home/jovyan/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Loading checkpoint shards:   0%|                                                                   | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███████████████████▋                                       | 1/3 [00:13<00:27, 13.54s/it]Loading checkpoint shards:  67%|███████████████████████████████████████▎                   | 2/3 [00:27<00:13, 13.73s/it]Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████| 3/3 [00:37<00:00, 11.88s/it]Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████| 3/3 [00:37<00:00, 12.36s/it]
+2025-04-27 00:53:15,561 - INFO - Model loaded with dtype torch.bfloat16
+2025-04-27 00:54:03,737 - INFO - Model moved to cuda:1
+2025-04-27 00:54:03,739 - INFO - Total parameters before compression: 6738415616
+2025-04-27 00:54:03,739 - INFO - Found 225 linear layers to potentially compress.
+Compressing Layers:   0%|                                                                        | 0/225 [00:00<?, ?it/s]2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.0.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.0.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.0.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.0.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.0.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.0.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.0.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.1.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.1.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.1.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.1.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.1.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.1.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.1.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.2.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.2.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.2.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.2.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.2.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.2.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,741 - INFO - Skipping layer model.layers.2.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,742 - INFO - Skipping layer model.layers.3.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,742 - INFO - Skipping layer model.layers.3.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,742 - INFO - Skipping layer model.layers.3.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,742 - INFO - Skipping layer model.layers.3.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,742 - INFO - Skipping layer model.layers.3.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,742 - INFO - Skipping layer model.layers.3.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,742 - INFO - Skipping layer model.layers.3.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,742 - INFO - Skipping layer model.layers.4.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,742 - INFO - Skipping layer model.layers.4.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,742 - INFO - Skipping layer model.layers.4.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,742 - INFO - Skipping layer model.layers.4.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,742 - INFO - Skipping layer model.layers.4.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.4.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.4.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.5.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.5.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.5.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.5.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.5.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.5.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.5.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.6.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.6.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.6.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.6.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.6.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.6.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.6.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.7.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.7.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.7.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.7.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.7.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.7.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.7.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,743 - INFO - Skipping layer model.layers.8.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.8.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.8.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.8.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.8.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.8.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.8.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.9.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.9.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.9.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.9.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.9.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.9.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.9.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.10.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.10.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.10.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.10.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.10.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.10.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.10.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.11.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.11.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.11.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.11.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,744 - INFO - Skipping layer model.layers.11.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,745 - INFO - Skipping layer model.layers.11.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,745 - INFO - Skipping layer model.layers.11.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:03,745 - INFO - Layer: model.layers.12.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-27 00:54:03,747 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_12_self_attn_q_proj.safetensors
+2025-04-27 00:54:03,747 - INFO - exists: True
+2025-04-27 00:54:03,749 - INFO - factorize_layer_kron_svd
+2025-04-27 00:54:05,543 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 00:54:07,419 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 00:54:09,372 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-27 00:54:10,840 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 00:54:12,459 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 00:54:14,358 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_12_self_attn_q_proj.safetensors True
+Layer: model.layers.12.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [9.15819407e-03 3.75725394e-05 2.34514755e-05 1.29712425e-05
+ 1.20524883e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-27 00:54:55,629 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-27 00:54:55,629 - INFO - Replacing 'model.layers.12.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:  38%|███████████████████████▊                                       | 85/225 [00:51<01:25,  1.64it/s]2025-04-27 00:54:55,630 - INFO - Skipping layer model.layers.12.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,630 - INFO - Skipping layer model.layers.12.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,630 - INFO - Skipping layer model.layers.12.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,630 - INFO - Skipping layer model.layers.12.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,631 - INFO - Skipping layer model.layers.12.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,631 - INFO - Skipping layer model.layers.12.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,631 - INFO - Skipping layer model.layers.13.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,631 - INFO - Skipping layer model.layers.13.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,631 - INFO - Skipping layer model.layers.13.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,631 - INFO - Skipping layer model.layers.13.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,631 - INFO - Skipping layer model.layers.13.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,631 - INFO - Skipping layer model.layers.13.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,631 - INFO - Skipping layer model.layers.13.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,631 - INFO - Skipping layer model.layers.14.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,631 - INFO - Skipping layer model.layers.14.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,631 - INFO - Skipping layer model.layers.14.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,631 - INFO - Skipping layer model.layers.14.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,632 - INFO - Skipping layer model.layers.14.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,632 - INFO - Skipping layer model.layers.14.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,632 - INFO - Skipping layer model.layers.14.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:54:55,632 - INFO - Layer: model.layers.15.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-27 00:54:55,635 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_15_self_attn_q_proj.safetensors
+2025-04-27 00:54:55,635 - INFO - exists: True
+2025-04-27 00:54:55,643 - INFO - factorize_layer_kron_svd
+2025-04-27 00:54:57,331 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 00:54:59,142 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 00:55:01,057 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-27 00:55:02,616 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 00:55:04,220 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 00:55:06,104 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_15_self_attn_q_proj.safetensors True
+Layer: model.layers.15.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.19919665e-02 7.38329763e-05 2.44418788e-05 1.36780509e-05
+ 1.00903217e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-27 00:55:50,535 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-27 00:55:50,537 - INFO - Replacing 'model.layers.15.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:  47%|█████████████████████████████▏                                | 106/225 [01:46<02:14,  1.13s/it]2025-04-27 00:55:50,538 - INFO - Skipping layer model.layers.15.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:55:50,538 - INFO - Skipping layer model.layers.15.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:55:50,538 - INFO - Skipping layer model.layers.15.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:55:50,538 - INFO - Skipping layer model.layers.15.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:55:50,538 - INFO - Skipping layer model.layers.15.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:55:50,538 - INFO - Skipping layer model.layers.15.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:55:50,538 - INFO - Skipping layer model.layers.16.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:55:50,538 - INFO - Skipping layer model.layers.16.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:55:50,539 - INFO - Layer: model.layers.16.self_attn.v_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-27 00:55:50,543 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_16_self_attn_v_proj.safetensors
+2025-04-27 00:55:50,543 - INFO - exists: True
+2025-04-27 00:55:50,561 - INFO - factorize_layer_kron_svd
+2025-04-27 00:55:52,295 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 00:55:54,063 - INFO -   Factor is positive definite (alpha=1.00e-04)
+2025-04-27 00:55:55,522 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 00:55:57,154 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 00:55:59,052 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_16_self_attn_v_proj.safetensors True
+Layer: model.layers.16.self_attn.v_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [2.1955712e-02 2.2352620e-05 1.8913308e-05 1.6113720e-05 1.5723988e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-27 00:56:41,721 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-27 00:56:41,721 - INFO - Replacing 'model.layers.16.self_attn.v_proj' (attribute 'v_proj' within parent LlamaAttention)
+Compressing Layers:  51%|███████████████████████████████▋                              | 115/225 [02:37<03:13,  1.76s/it]2025-04-27 00:56:41,722 - INFO - Skipping layer model.layers.16.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:56:41,722 - INFO - Skipping layer model.layers.16.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:56:41,722 - INFO - Skipping layer model.layers.16.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:56:41,722 - INFO - Skipping layer model.layers.16.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:56:41,722 - INFO - Layer: model.layers.17.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-27 00:56:41,723 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_17_self_attn_q_proj.safetensors
+2025-04-27 00:56:41,723 - INFO - exists: True
+2025-04-27 00:56:41,743 - INFO - factorize_layer_kron_svd
+2025-04-27 00:56:43,517 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 00:56:45,204 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 00:56:47,088 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-27 00:56:48,614 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 00:56:50,297 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 00:56:52,215 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_17_self_attn_q_proj.safetensors True
+Layer: model.layers.17.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.9799747e-02 3.0997286e-05 1.8318075e-05 1.5734129e-05 9.7556685e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-27 00:57:34,703 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-27 00:57:34,704 - INFO - Replacing 'model.layers.17.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:  53%|█████████████████████████████████                             | 120/225 [03:30<04:36,  2.63s/it]2025-04-27 00:57:34,705 - INFO - Skipping layer model.layers.17.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:57:34,705 - INFO - Skipping layer model.layers.17.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:57:34,705 - INFO - Skipping layer model.layers.17.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:57:34,705 - INFO - Skipping layer model.layers.17.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:57:34,705 - INFO - Skipping layer model.layers.17.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:57:34,705 - INFO - Skipping layer model.layers.17.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:57:34,705 - INFO - Skipping layer model.layers.18.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:57:34,705 - INFO - Skipping layer model.layers.18.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:57:34,705 - INFO - Skipping layer model.layers.18.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:57:34,705 - INFO - Skipping layer model.layers.18.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:57:34,705 - INFO - Skipping layer model.layers.18.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:57:34,705 - INFO - Layer: model.layers.18.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-27 00:57:34,708 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_18_mlp_up_proj.safetensors
+2025-04-27 00:57:34,708 - INFO - exists: True
+2025-04-27 00:57:34,718 - INFO - factorize_layer_kron_svd
+2025-04-27 00:57:36,665 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 00:57:38,638 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 00:57:40,378 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-27 00:57:42,987 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 00:57:48,287 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_18_mlp_up_proj.safetensors True
+Layer: model.layers.18.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [5.7937209e-03 2.0253658e-05 1.6411330e-05 1.4584949e-05 1.2499403e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-27 00:59:17,111 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-27 00:59:17,111 - INFO - Replacing 'model.layers.18.mlp.up_proj' (attribute 'up_proj' within parent LlamaMLP)
+Compressing Layers:  59%|████████████████████████████████████▎                         | 132/225 [05:13<06:23,  4.12s/it]2025-04-27 00:59:17,112 - INFO - Skipping layer model.layers.18.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 00:59:17,112 - INFO - Layer: model.layers.19.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-27 00:59:17,116 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_19_self_attn_q_proj.safetensors
+2025-04-27 00:59:17,116 - INFO - exists: True
+2025-04-27 00:59:17,138 - INFO - factorize_layer_kron_svd
+2025-04-27 00:59:19,146 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 00:59:21,083 - INFO -   Factor is positive definite (alpha=1.00e-04)
+2025-04-27 00:59:22,590 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 00:59:24,364 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_19_self_attn_q_proj.safetensors True
+Layer: model.layers.19.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [2.2634035e-03 7.5883843e-05 1.0972199e-05 7.9327338e-06 7.6394726e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-27 01:00:08,516 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-27 01:00:08,517 - INFO - Replacing 'model.layers.19.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:  60%|████████████████████████████████████▉                         | 134/225 [06:04<08:06,  5.35s/it]2025-04-27 01:00:08,517 - INFO - Skipping layer model.layers.19.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:00:08,517 - INFO - Skipping layer model.layers.19.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:00:08,517 - INFO - Skipping layer model.layers.19.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:00:08,517 - INFO - Skipping layer model.layers.19.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:00:08,517 - INFO - Skipping layer model.layers.19.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:00:08,517 - INFO - Skipping layer model.layers.19.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:00:08,517 - INFO - Skipping layer model.layers.20.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:00:08,517 - INFO - Skipping layer model.layers.20.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:00:08,517 - INFO - Skipping layer model.layers.20.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:00:08,518 - INFO - Skipping layer model.layers.20.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:00:08,518 - INFO - Layer: model.layers.20.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-27 01:00:08,519 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_20_mlp_gate_proj.safetensors
+2025-04-27 01:00:08,519 - INFO - exists: True
+2025-04-27 01:00:08,529 - INFO - factorize_layer_kron_svd
+2025-04-27 01:00:10,516 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:00:12,238 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 01:00:14,073 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-27 01:00:16,835 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:00:22,415 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_20_mlp_gate_proj.safetensors True
+Layer: model.layers.20.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [5.6294589e-03 2.1218650e-05 1.5237835e-05 1.4524096e-05 1.3646030e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-27 01:01:48,884 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-27 01:01:48,884 - INFO - Replacing 'model.layers.20.mlp.gate_proj' (attribute 'gate_proj' within parent LlamaMLP)
+Compressing Layers:  64%|███████████████████████████████████████▉                      | 145/225 [07:45<08:40,  6.51s/it]2025-04-27 01:01:48,884 - INFO - Skipping layer model.layers.20.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:01:48,884 - INFO - Skipping layer model.layers.20.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:01:48,884 - INFO - Skipping layer model.layers.21.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:01:48,885 - INFO - Skipping layer model.layers.21.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:01:48,885 - INFO - Skipping layer model.layers.21.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:01:48,885 - INFO - Skipping layer model.layers.21.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:01:48,885 - INFO - Skipping layer model.layers.21.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:01:48,885 - INFO - Layer: model.layers.21.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-27 01:01:48,888 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_21_mlp_up_proj.safetensors
+2025-04-27 01:01:48,888 - INFO - exists: True
+2025-04-27 01:01:48,909 - INFO - factorize_layer_kron_svd
+2025-04-27 01:01:50,876 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:01:52,547 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 01:01:54,268 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-27 01:01:56,833 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:02:02,024 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_21_mlp_up_proj.safetensors True
+Layer: model.layers.21.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [1.8695735e-03 5.5963137e-05 1.4356574e-05 1.3274203e-05 1.2030486e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-27 01:03:25,468 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-27 01:03:25,468 - INFO - Replacing 'model.layers.21.mlp.up_proj' (attribute 'up_proj' within parent LlamaMLP)
+Compressing Layers:  68%|██████████████████████████████████████████▏                   | 153/225 [09:21<09:25,  7.86s/it]2025-04-27 01:03:25,469 - INFO - Skipping layer model.layers.21.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:03:25,469 - INFO - Skipping layer model.layers.22.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:03:25,469 - INFO - Skipping layer model.layers.22.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:03:25,469 - INFO - Skipping layer model.layers.22.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:03:25,469 - INFO - Skipping layer model.layers.22.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:03:25,469 - INFO - Skipping layer model.layers.22.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:03:25,469 - INFO - Layer: model.layers.22.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-27 01:03:25,472 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_22_mlp_up_proj.safetensors
+2025-04-27 01:03:25,473 - INFO - exists: True
+2025-04-27 01:03:25,515 - INFO - factorize_layer_kron_svd
+2025-04-27 01:03:27,569 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:03:29,455 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 01:03:31,259 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-27 01:03:34,005 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:03:39,586 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_22_mlp_up_proj.safetensors True
+Layer: model.layers.22.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [1.2615041e-03 2.1604352e-05 1.3284305e-05 1.1028132e-05 1.0561911e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-27 01:05:08,983 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-27 01:05:08,983 - INFO - Replacing 'model.layers.22.mlp.up_proj' (attribute 'up_proj' within parent LlamaMLP)
+Compressing Layers:  71%|████████████████████████████████████████████                  | 160/225 [11:05<10:15,  9.47s/it]2025-04-27 01:05:08,984 - INFO - Skipping layer model.layers.22.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:05:08,984 - INFO - Skipping layer model.layers.23.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:05:08,984 - INFO - Skipping layer model.layers.23.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:05:08,984 - INFO - Skipping layer model.layers.23.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:05:08,984 - INFO - Skipping layer model.layers.23.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:05:08,984 - INFO - Layer: model.layers.23.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-27 01:05:08,987 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_23_mlp_gate_proj.safetensors
+2025-04-27 01:05:08,987 - INFO - exists: True
+2025-04-27 01:05:09,013 - INFO - factorize_layer_kron_svd
+2025-04-27 01:05:10,998 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:05:12,654 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 01:05:14,470 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-27 01:05:17,129 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:05:22,752 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_23_mlp_gate_proj.safetensors True
+Layer: model.layers.23.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [1.6312244e-03 1.5538668e-05 4.1256385e-06 2.1622898e-06 2.0991954e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-27 01:06:54,170 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-27 01:06:54,171 - INFO - Replacing 'model.layers.23.mlp.gate_proj' (attribute 'gate_proj' within parent LlamaMLP)
+Compressing Layers:  74%|█████████████████████████████████████████████▋                | 166/225 [12:50<11:04, 11.26s/it]2025-04-27 01:06:54,171 - INFO - Skipping layer model.layers.23.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:06:54,171 - INFO - Skipping layer model.layers.23.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:06:54,171 - INFO - Skipping layer model.layers.24.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:06:54,171 - INFO - Skipping layer model.layers.24.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:06:54,171 - INFO - Skipping layer model.layers.24.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:06:54,171 - INFO - Skipping layer model.layers.24.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:06:54,172 - INFO - Skipping layer model.layers.24.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:06:54,172 - INFO - Layer: model.layers.24.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-27 01:06:54,173 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_24_mlp_up_proj.safetensors
+2025-04-27 01:06:54,173 - INFO - exists: True
+2025-04-27 01:06:54,207 - INFO - factorize_layer_kron_svd
+2025-04-27 01:06:55,957 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:06:57,501 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 01:06:59,077 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-27 01:07:00,631 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-27 01:07:02,153 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-27 01:07:04,056 - INFO -   Factor is positive definite (alpha=1.00e+00)
+2025-04-27 01:07:06,434 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:07:09,007 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 01:07:11,559 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-27 01:07:14,117 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-27 01:07:16,638 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-27 01:07:21,960 - INFO -   Factor is positive definite (alpha=1.00e+00)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_24_mlp_up_proj.safetensors True
+Layer: model.layers.24.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [4.6520490e-06 4.4155945e-06 4.3086152e-06 4.1636677e-06 4.0883192e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-27 01:08:56,194 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-27 01:08:56,194 - INFO - Replacing 'model.layers.24.mlp.up_proj' (attribute 'up_proj' within parent LlamaMLP)
+Compressing Layers:  77%|███████████████████████████████████████████████▉              | 174/225 [14:52<10:34, 12.44s/it]2025-04-27 01:08:56,195 - INFO - Skipping layer model.layers.24.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:08:56,195 - INFO - Skipping layer model.layers.25.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:08:56,195 - INFO - Skipping layer model.layers.25.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:08:56,195 - INFO - Skipping layer model.layers.25.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:08:56,195 - INFO - Skipping layer model.layers.25.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:08:56,195 - INFO - Skipping layer model.layers.25.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:08:56,195 - INFO - Layer: model.layers.25.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-27 01:08:56,197 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_25_mlp_up_proj.safetensors
+2025-04-27 01:08:56,198 - INFO - exists: True
+2025-04-27 01:08:56,243 - INFO - factorize_layer_kron_svd
+2025-04-27 01:08:58,159 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:09:00,049 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 01:09:01,885 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-27 01:09:04,530 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:09:10,188 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_25_mlp_up_proj.safetensors True
+Layer: model.layers.25.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [5.2369884e-03 1.2808485e-05 1.0910483e-05 1.0035876e-05 9.8339870e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-27 01:10:38,567 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-27 01:10:38,567 - INFO - Replacing 'model.layers.25.mlp.up_proj' (attribute 'up_proj' within parent LlamaMLP)
+Compressing Layers:  80%|█████████████████████████████████████████████████▉            | 181/225 [16:34<09:33, 13.03s/it]2025-04-27 01:10:38,567 - INFO - Skipping layer model.layers.25.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:10:38,567 - INFO - Skipping layer model.layers.26.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:10:38,568 - INFO - Skipping layer model.layers.26.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:10:38,568 - INFO - Skipping layer model.layers.26.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:10:38,568 - INFO - Skipping layer model.layers.26.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:10:38,568 - INFO - Skipping layer model.layers.26.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:10:38,568 - INFO - Layer: model.layers.26.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-27 01:10:38,600 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_26_mlp_up_proj.safetensors
+2025-04-27 01:10:38,600 - INFO - exists: True
+2025-04-27 01:10:38,630 - INFO - factorize_layer_kron_svd
+2025-04-27 01:10:40,523 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:10:42,260 - INFO -   Factor is positive definite (alpha=1.00e-04)
+2025-04-27 01:10:44,957 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:10:50,576 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_26_mlp_up_proj.safetensors True
+Layer: model.layers.26.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [5.6883384e-04 1.2054178e-04 1.2884599e-05 1.1027682e-05 9.3955405e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-27 01:12:17,368 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-27 01:12:17,369 - INFO - Replacing 'model.layers.26.mlp.up_proj' (attribute 'up_proj' within parent LlamaMLP)
+Compressing Layers:  84%|███████████████████████████████████████████████████▊          | 188/225 [18:13<08:13, 13.34s/it]2025-04-27 01:12:17,369 - INFO - Skipping layer model.layers.26.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:12:17,369 - INFO - Skipping layer model.layers.27.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:12:17,369 - INFO - Skipping layer model.layers.27.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:12:17,369 - INFO - Skipping layer model.layers.27.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:12:17,369 - INFO - Skipping layer model.layers.27.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:12:17,369 - INFO - Skipping layer model.layers.27.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:12:17,369 - INFO - Skipping layer model.layers.27.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:12:17,369 - INFO - Layer: model.layers.27.mlp.down_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-27 01:12:17,397 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_27_mlp_down_proj.safetensors
+2025-04-27 01:12:17,397 - INFO - exists: True
+2025-04-27 01:12:17,447 - INFO - factorize_layer_kron_svd
+2025-04-27 01:12:20,439 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:12:23,705 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 01:12:29,041 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-27 01:12:30,515 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:12:32,154 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 01:12:33,969 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_27_mlp_down_proj.safetensors True
+Layer: model.layers.27.mlp.down_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=11008, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x11008)...
+  SVD complete. Singular values (top 5): [4.3249605e-03 9.9447533e-04 4.9234852e-05 3.5841313e-05 3.4881272e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,11008), (4096,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=11008, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=4096, bias=False)
+)
+2025-04-27 01:14:28,884 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=11008, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=4096, bias=False)
+)')
+2025-04-27 01:14:28,885 - INFO - Replacing 'model.layers.27.mlp.down_proj' (attribute 'down_proj' within parent LlamaMLP)
+Compressing Layers:  87%|██████████████████████████████████████████████████████        | 196/225 [20:25<06:54, 14.31s/it]2025-04-27 01:14:28,885 - INFO - Skipping layer model.layers.28.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:14:28,885 - INFO - Skipping layer model.layers.28.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:14:28,885 - INFO - Skipping layer model.layers.28.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:14:28,885 - INFO - Skipping layer model.layers.28.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:14:28,885 - INFO - Layer: model.layers.28.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-27 01:14:28,905 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_28_mlp_gate_proj.safetensors
+2025-04-27 01:14:28,905 - INFO - exists: True
+2025-04-27 01:14:28,954 - INFO - factorize_layer_kron_svd
+2025-04-27 01:14:30,880 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:14:32,647 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 01:14:34,452 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-27 01:14:37,141 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:14:42,412 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_28_mlp_gate_proj.safetensors True
+Layer: model.layers.28.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [2.48785485e-02 2.44410057e-05 1.47788587e-05 1.22457295e-05
+ 1.07915093e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-27 01:16:11,477 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-27 01:16:11,477 - INFO - Replacing 'model.layers.28.mlp.gate_proj' (attribute 'gate_proj' within parent LlamaMLP)
+Compressing Layers:  89%|███████████████████████████████████████████████████████▍      | 201/225 [22:07<06:15, 15.66s/it]2025-04-27 01:16:11,477 - INFO - Skipping layer model.layers.28.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:16:11,477 - INFO - Skipping layer model.layers.28.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:16:11,477 - INFO - Skipping layer model.layers.29.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:16:11,478 - INFO - Skipping layer model.layers.29.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:16:11,478 - INFO - Skipping layer model.layers.29.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:16:11,478 - INFO - Skipping layer model.layers.29.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:16:11,478 - INFO - Layer: model.layers.29.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-27 01:16:11,480 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_29_mlp_gate_proj.safetensors
+2025-04-27 01:16:11,480 - INFO - exists: True
+2025-04-27 01:16:11,516 - INFO - factorize_layer_kron_svd
+2025-04-27 01:16:13,482 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:16:15,212 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-27 01:16:17,056 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-27 01:16:20,001 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-27 01:16:25,395 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_29_mlp_gate_proj.safetensors True
+Layer: model.layers.29.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [4.2779949e-03 5.4828401e-05 2.5178630e-05 1.7353015e-05 1.1980547e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-27 01:17:55,668 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-27 01:17:55,668 - INFO - Replacing 'model.layers.29.mlp.gate_proj' (attribute 'gate_proj' within parent LlamaMLP)
+Compressing Layers:  92%|█████████████████████████████████████████████████████████▎    | 208/225 [23:51<04:22, 15.43s/it]2025-04-27 01:17:55,669 - INFO - Skipping layer model.layers.29.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:17:55,669 - INFO - Skipping layer model.layers.29.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:17:55,669 - INFO - Skipping layer model.layers.30.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:17:55,669 - INFO - Skipping layer model.layers.30.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:17:55,669 - INFO - Skipping layer model.layers.30.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:17:55,669 - INFO - Skipping layer model.layers.30.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:17:55,669 - INFO - Skipping layer model.layers.30.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:17:55,669 - INFO - Skipping layer model.layers.30.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:17:55,669 - INFO - Skipping layer model.layers.30.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:17:55,669 - INFO - Skipping layer model.layers.31.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:17:55,669 - INFO - Skipping layer model.layers.31.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:17:55,669 - INFO - Skipping layer model.layers.31.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:17:55,669 - INFO - Skipping layer model.layers.31.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:17:55,669 - INFO - Skipping layer model.layers.31.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:17:55,669 - INFO - Skipping layer model.layers.31.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:17:55,669 - INFO - Skipping layer model.layers.31.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-27 01:17:55,669 - INFO - Skipping layer lm_head: Sensitivity ratio >= 1.0 (1.00). No compression.
+Compressing Layers: 100%|██████████████████████████████████████████████████████████████| 225/225 [23:51<00:00,  6.36s/it]
+2025-04-27 01:17:55,670 - INFO - Compression finished. Processed: 16, Skipped (Ratio>=1 or No Sensitivity/Factors): 209, Failed: 0
+2025-04-27 01:17:55,671 - INFO - Total parameters after compression: 6432335872
+2025-04-27 01:17:55,671 - INFO - C rate : 0.954576897383232
+2025-04-27 01:17:55,672 - INFO - Saving compressed model to ./llama10
+2025-04-27 01:18:33,225 - INFO - Compressed model and tokenizer saved.
+2025-04-27 01:18:33,249 - INFO - Evaluating on wikitext2
+Evaluating:   0%|                                                                                 | 0/21 [00:00<?, ?it/s]Evaluating:   5%|███▍                                                                     | 1/21 [00:03<01:03,  3.16s/it]Evaluating:  10%|██████▉                                                                  | 2/21 [00:04<00:37,  1.97s/it]Evaluating:  14%|██████████▍                                                              | 3/21 [00:05<00:28,  1.59s/it]Evaluating:  19%|█████████████▉                                                           | 4/21 [00:06<00:23,  1.41s/it]Evaluating:  24%|█████████████████▍                                                       | 5/21 [00:07<00:21,  1.31s/it]Evaluating:  29%|████████████████████▊                                                    | 6/21 [00:08<00:18,  1.25s/it]Evaluating:  33%|████████████████████████▎                                                | 7/21 [00:09<00:17,  1.22s/it]Evaluating:  38%|███████████████████████████▊                                             | 8/21 [00:11<00:15,  1.19s/it]Evaluating:  43%|███████████████████████████████▎                                         | 9/21 [00:12<00:14,  1.18s/it]Evaluating:  48%|██████████████████████████████████▎                                     | 10/21 [00:13<00:12,  1.17s/it]Evaluating:  52%|█████████████████████████████████████▋                                  | 11/21 [00:14<00:11,  1.16s/it]Evaluating:  57%|█████████████████████████████████████████▏                              | 12/21 [00:15<00:10,  1.15s/it]Evaluating:  62%|████████████████████████████████████████████▌                           | 13/21 [00:16<00:09,  1.15s/it]Evaluating:  67%|████████████████████████████████████████████████                        | 14/21 [00:17<00:08,  1.15s/it]Evaluating:  71%|███████████████████████████████████████████████████▍                    | 15/21 [00:19<00:06,  1.15s/it]Evaluating:  76%|██████████████████████████████████████████████████████▊                 | 16/21 [00:20<00:05,  1.15s/it]Evaluating:  81%|██████████████████████████████████████████████████████████▎             | 17/21 [00:21<00:04,  1.15s/it]Evaluating:  86%|█████████████████████████████████████████████████████████████▋          | 18/21 [00:22<00:03,  1.14s/it]Evaluating:  90%|█████████████████████████████████████████████████████████████████▏      | 19/21 [00:23<00:02,  1.15s/it]Evaluating:  95%|████████████████████████████████████████████████████████████████████▌   | 20/21 [00:24<00:01,  1.15s/it]Evaluating: 100%|████████████████████████████████████████████████████████████████████████| 21/21 [00:25<00:00,  1.07s/it]Evaluating: 100%|████████████████████████████████████████████████████████████████████████| 21/21 [00:25<00:00,  1.23s/it]
+2025-04-27 01:19:07,015 - INFO - wikitext2 perplexity: 8.0000
+2025-04-27 01:19:07,016 - INFO - Evaluating on ptb
+nlls.shape torch.Size([16376])
+Mean NLL: 2.078125
+Evaluating:   0%|                                                                                  | 0/7 [00:00<?, ?it/s]Evaluating:  14%|██████████▌                                                               | 1/7 [00:01<00:07,  1.17s/it]Evaluating:  29%|█████████████████████▏                                                    | 2/7 [00:02<00:05,  1.15s/it]Evaluating:  43%|███████████████████████████████▋                                          | 3/7 [00:03<00:04,  1.15s/it]Evaluating:  57%|██████████████████████████████████████████▎                               | 4/7 [00:04<00:03,  1.15s/it]Evaluating:  71%|████████████████████████████████████████████████████▊                     | 5/7 [00:05<00:02,  1.15s/it]Evaluating:  86%|███████████████████████████████████████████████████████████████▍          | 6/7 [00:06<00:01,  1.14s/it]Evaluating: 100%|██████████████████████████████████████████████████████████████████████████| 7/7 [00:07<00:00,  1.10s/it]Evaluating: 100%|██████████████████████████████████████████████████████████████████████████| 7/7 [00:07<00:00,  1.13s/it]
+2025-04-27 01:19:16,950 - INFO - ptb perplexity: 27.8750
+2025-04-27 01:19:16,951 - INFO - Evaluation results:
+2025-04-27 01:19:16,951 - INFO -   wikitext2: 8.0000
+2025-04-27 01:19:16,951 - INFO -   ptb: 27.8750
+nlls.shape torch.Size([16376])
+Mean NLL: 3.328125

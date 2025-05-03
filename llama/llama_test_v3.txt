@@ -1,0 +1,2164 @@
+2025-04-28 02:48:28,576 - INFO - Loading model: unsloth/llama-2-7b-chat
+model.layers.28.self_attn.k_proj 0.3
+model.layers.26.mlp.gate_proj 0.5
+model.layers.26.mlp.up_proj 0.5
+model.layers.25.mlp.up_proj 0.5
+model.layers.23.mlp.gate_proj 0.5
+model.layers.23.mlp.down_proj 0.5
+model.layers.22.mlp.up_proj 0.5
+model.layers.22.mlp.down_proj 0.5
+model.layers.21.mlp.up_proj 0.5
+model.layers.21.mlp.down_proj 0.5
+model.layers.20.mlp.gate_proj 0.5
+model.layers.20.self_attn.q_proj 0.3
+model.layers.19.mlp.up_proj 0.5
+model.layers.19.self_attn.q_proj 0.3
+model.layers.18.mlp.up_proj 0.5
+model.layers.18.self_attn.q_proj 0.3
+model.layers.18.self_attn.k_proj 0.3
+model.layers.17.self_attn.q_proj 0.3
+model.layers.16.self_attn.v_proj 0.3
+model.layers.15.self_attn.q_proj 0.3
+model.layers.14.mlp.gate_proj 0.5
+model.layers.14.mlp.up_proj 0.5
+model.layers.13.mlp.up_proj 0.5
+model.layers.13.self_attn.q_proj 0.3
+model.layers.13.self_attn.k_proj 0.3
+model.layers.13.self_attn.v_proj 0.3
+model.layers.13.self_attn.o_proj 0.3
+model.layers.12.mlp.gate_proj 0.5
+model.layers.12.mlp.up_proj 0.5
+model.layers.12.self_attn.q_proj 0.3
+model.layers.12.self_attn.k_proj 0.3
+model.layers.11.self_attn.q_proj 0.3
+model.layers.10.self_attn.v_proj 0.3
+model.layers.8.self_attn.q_proj 0.3
+model.layers.8.self_attn.k_proj 0.3
+model.layers.7.mlp.down_proj 0.5
+model.layers.7.self_attn.q_proj 0.3
+model.layers.7.self_attn.k_proj 0.3
+model.layers.6.self_attn.q_proj 0.3
+model.layers.6.self_attn.k_proj 0.3
+model.layers.5.self_attn.k_proj 0.3
+model.layers.4.self_attn.q_proj 0.3
+model.layers.4.self_attn.k_proj 0.3
+model.layers.3.self_attn.q_proj 0.3
+model.layers.3.self_attn.k_proj 0.3
+model.layers.2.mlp.gate_proj 0.5
+model.layers.2.self_attn.q_proj 0.3
+model.layers.2.self_attn.k_proj 0.3
+model.layers.1.mlp.gate_proj 0.5
+model.layers.1.mlp.up_proj 0.5
+model.layers.1.self_attn.k_proj 0.3
+model.layers.0.mlp.gate_proj 0.5
+[2025-04-28 02:48:33,454] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Warning: The cache directory for DeepSpeed Triton autotune, /home/jovyan/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Loading checkpoint shards:   0%|                                                                                                                                                                            | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|██████████████████████████████████████████████████████▋                                                                                                             | 1/3 [00:00<00:01,  1.46it/s]Loading checkpoint shards:  67%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                      | 2/3 [00:01<00:00,  1.50it/s]Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  1.71it/s]Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  1.64it/s]
+2025-04-28 02:48:37,272 - INFO - Model loaded with dtype torch.bfloat16
+2025-04-28 02:49:13,151 - INFO - Model moved to cuda:0
+2025-04-28 02:49:13,152 - INFO - Total parameters before compression: 6738415616
+2025-04-28 02:49:13,152 - INFO - Found 225 linear layers to potentially compress.
+Compressing Layers:   0%|                                                                                                                                                                                 | 0/225 [00:00<?, ?it/s]2025-04-28 02:49:13,154 - INFO - Skipping layer model.layers.0.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:49:13,154 - INFO - Skipping layer model.layers.0.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:49:13,154 - INFO - Skipping layer model.layers.0.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:49:13,154 - INFO - Skipping layer model.layers.0.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:49:13,154 - INFO - Layer: model.layers.0.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 02:49:13,155 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_0_mlp_gate_proj.safetensors
+2025-04-28 02:49:13,155 - INFO - exists: True
+2025-04-28 02:49:13,157 - INFO - factorize_layer_kron_svd
+2025-04-28 02:49:15,309 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:49:16,512 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 02:49:17,835 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 02:49:19,568 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:49:22,955 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_0_mlp_gate_proj.safetensors True
+Layer: model.layers.0.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [8.1718399e-04 2.9179015e-05 1.2629871e-05 1.1120813e-05 5.3344133e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 02:50:17,014 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 02:50:17,015 - INFO - Replacing 'model.layers.0.mlp.gate_proj' (attribute 'gate_proj' within parent LlamaMLP)
+Compressing Layers:   2%|███▊                                                                                                                                                                     | 5/225 [01:03<46:49, 12.77s/it]2025-04-28 02:50:17,015 - INFO - Skipping layer model.layers.0.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:50:17,015 - INFO - Skipping layer model.layers.0.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:50:17,015 - INFO - Skipping layer model.layers.1.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:50:17,015 - INFO - Layer: model.layers.1.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 02:50:17,018 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_1_self_attn_k_proj.safetensors
+2025-04-28 02:50:17,018 - INFO - exists: True
+2025-04-28 02:50:17,045 - INFO - factorize_layer_kron_svd
+2025-04-28 02:50:18,166 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:50:19,432 - INFO -   Factor is positive definite (alpha=1.00e-04)
+2025-04-28 02:50:20,528 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:50:21,758 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_1_self_attn_k_proj.safetensors True
+Layer: model.layers.1.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [2.3582433e-03 8.8144079e-05 4.6490746e-05 3.9380862e-05 3.1268388e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 02:50:47,391 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 02:50:47,392 - INFO - Replacing 'model.layers.1.self_attn.k_proj' (attribute 'k_proj' within parent LlamaAttention)
+Compressing Layers:   4%|██████▊                                                                                                                                                                  | 9/225 [01:34<36:02, 10.01s/it]2025-04-28 02:50:47,392 - INFO - Skipping layer model.layers.1.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:50:47,392 - INFO - Skipping layer model.layers.1.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:50:47,392 - INFO - Layer: model.layers.1.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 02:50:47,393 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_1_mlp_gate_proj.safetensors
+2025-04-28 02:50:47,393 - INFO - exists: True
+2025-04-28 02:50:47,398 - INFO - factorize_layer_kron_svd
+2025-04-28 02:50:48,627 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:50:49,700 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 02:50:50,758 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 02:50:51,798 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 02:50:52,860 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 02:50:54,095 - INFO -   Factor is positive definite (alpha=1.00e+00)
+2025-04-28 02:50:55,731 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:50:57,571 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 02:50:59,394 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 02:51:01,198 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 02:51:03,088 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 02:51:06,564 - INFO -   Factor is positive definite (alpha=1.00e+00)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_1_mlp_gate_proj.safetensors True
+Layer: model.layers.1.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [1.4005915e-05 9.7339671e-06 8.9150799e-06 8.8396546e-06 8.2917913e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 02:52:04,812 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 02:52:04,812 - INFO - Replacing 'model.layers.1.mlp.gate_proj' (attribute 'gate_proj' within parent LlamaMLP)
+Compressing Layers:   5%|████████▉                                                                                                                                                               | 12/225 [02:51<55:55, 15.75s/it]2025-04-28 02:52:04,812 - INFO - Layer: model.layers.1.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 02:52:04,814 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_1_mlp_up_proj.safetensors
+2025-04-28 02:52:04,814 - INFO - exists: True
+2025-04-28 02:52:04,852 - INFO - factorize_layer_kron_svd
+2025-04-28 02:52:06,049 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:52:07,216 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 02:52:08,470 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 02:52:10,192 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:52:13,832 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_1_mlp_up_proj.safetensors True
+Layer: model.layers.1.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [8.3380165e-03 1.2735171e-05 4.8180482e-06 1.3797395e-06 1.0792503e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 02:53:11,398 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 02:53:11,398 - INFO - Replacing 'model.layers.1.mlp.up_proj' (attribute 'up_proj' within parent LlamaMLP)
+Compressing Layers:   6%|█████████▌                                                                                                                                                            | 13/225 [03:58<1:22:10, 23.26s/it]2025-04-28 02:53:11,399 - INFO - Skipping layer model.layers.1.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:53:11,399 - INFO - Layer: model.layers.2.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 02:53:11,401 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_2_self_attn_q_proj.safetensors
+2025-04-28 02:53:11,401 - INFO - exists: True
+2025-04-28 02:53:11,435 - INFO - factorize_layer_kron_svd
+2025-04-28 02:53:12,485 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:53:13,538 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 02:53:14,598 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 02:53:15,636 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 02:53:16,679 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 02:53:17,881 - INFO -   Factor is positive definite (alpha=1.00e+00)
+2025-04-28 02:53:18,929 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:53:20,042 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 02:53:21,087 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 02:53:22,131 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 02:53:23,194 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 02:53:24,401 - INFO -   Factor is positive definite (alpha=1.00e+00)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_2_self_attn_q_proj.safetensors True
+Layer: model.layers.2.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.6124124e-05 1.1238000e-05 1.0046171e-05 9.5376463e-06 9.3023737e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 02:53:51,843 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 02:53:51,843 - INFO - Replacing 'model.layers.2.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:   7%|███████████                                                                                                                                                           | 15/225 [04:38<1:18:15, 22.36s/it]2025-04-28 02:53:51,843 - INFO - Layer: model.layers.2.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 02:53:51,844 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_2_self_attn_k_proj.safetensors
+2025-04-28 02:53:51,844 - INFO - exists: True
+2025-04-28 02:53:51,848 - INFO - factorize_layer_kron_svd
+2025-04-28 02:53:52,988 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:53:54,221 - INFO -   Factor is positive definite (alpha=1.00e-04)
+2025-04-28 02:53:55,290 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:53:56,522 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_2_self_attn_k_proj.safetensors True
+Layer: model.layers.2.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [4.0046256e-03 1.5359199e-04 9.4199255e-05 5.9006747e-05 4.1726034e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 02:54:24,456 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 02:54:24,456 - INFO - Replacing 'model.layers.2.self_attn.k_proj' (attribute 'k_proj' within parent LlamaAttention)
+Compressing Layers:   7%|███████████▊                                                                                                                                                          | 16/225 [05:11<1:24:07, 24.15s/it]2025-04-28 02:54:24,457 - INFO - Skipping layer model.layers.2.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:54:24,457 - INFO - Skipping layer model.layers.2.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:54:24,457 - INFO - Layer: model.layers.2.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 02:54:24,458 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_2_mlp_gate_proj.safetensors
+2025-04-28 02:54:24,459 - INFO - exists: True
+2025-04-28 02:54:24,465 - INFO - factorize_layer_kron_svd
+2025-04-28 02:54:25,680 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:54:26,726 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 02:54:27,781 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 02:54:28,822 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 02:54:29,883 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 02:54:31,077 - INFO -   Factor is positive definite (alpha=1.00e+00)
+2025-04-28 02:54:32,696 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:54:34,573 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 02:54:36,381 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 02:54:38,192 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 02:54:40,016 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 02:54:43,475 - INFO -   Factor is positive definite (alpha=1.00e+00)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_2_mlp_gate_proj.safetensors True
+Layer: model.layers.2.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [1.0536157e-05 7.8889116e-06 7.3416263e-06 6.9958951e-06 6.9346693e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 02:55:45,995 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 02:55:45,995 - INFO - Replacing 'model.layers.2.mlp.gate_proj' (attribute 'gate_proj' within parent LlamaMLP)
+Compressing Layers:   8%|██████████████                                                                                                                                                        | 19/225 [06:32<1:27:22, 25.45s/it]2025-04-28 02:55:45,995 - INFO - Skipping layer model.layers.2.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:55:45,995 - INFO - Skipping layer model.layers.2.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:55:45,995 - INFO - Layer: model.layers.3.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 02:55:45,997 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_3_self_attn_q_proj.safetensors
+2025-04-28 02:55:45,997 - INFO - exists: True
+2025-04-28 02:55:46,019 - INFO - factorize_layer_kron_svd
+2025-04-28 02:55:47,139 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:55:48,360 - INFO -   Factor is positive definite (alpha=1.00e-04)
+2025-04-28 02:55:49,417 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:55:50,724 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_3_self_attn_q_proj.safetensors True
+Layer: model.layers.3.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.1026561e-02 7.6449120e-05 6.9494883e-05 4.4865315e-05 4.0528874e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 02:56:19,255 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 02:56:19,255 - INFO - Replacing 'model.layers.3.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:  10%|████████████████▏                                                                                                                                                     | 22/225 [07:06<1:07:39, 20.00s/it]2025-04-28 02:56:19,256 - INFO - Layer: model.layers.3.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 02:56:19,256 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_3_self_attn_k_proj.safetensors
+2025-04-28 02:56:19,257 - INFO - exists: True
+2025-04-28 02:56:19,261 - INFO - factorize_layer_kron_svd
+2025-04-28 02:56:20,408 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:56:21,440 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 02:56:22,483 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 02:56:23,533 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 02:56:24,588 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 02:56:25,793 - INFO -   Factor is positive definite (alpha=1.00e+00)
+2025-04-28 02:56:26,828 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:56:27,862 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 02:56:28,898 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 02:56:29,923 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 02:56:30,970 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 02:56:32,169 - INFO -   Factor is positive definite (alpha=1.00e+00)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_3_self_attn_k_proj.safetensors True
+Layer: model.layers.3.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.5212615e-05 7.6301594e-06 6.8745117e-06 6.6968514e-06 6.6398402e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 02:57:00,278 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 02:57:00,279 - INFO - Replacing 'model.layers.3.self_attn.k_proj' (attribute 'k_proj' within parent LlamaAttention)
+Compressing Layers:  10%|████████████████▉                                                                                                                                                     | 23/225 [07:47<1:18:09, 23.22s/it]2025-04-28 02:57:00,279 - INFO - Skipping layer model.layers.3.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:57:00,279 - INFO - Skipping layer model.layers.3.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:57:00,279 - INFO - Skipping layer model.layers.3.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:57:00,279 - INFO - Skipping layer model.layers.3.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:57:00,279 - INFO - Skipping layer model.layers.3.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:57:00,279 - INFO - Layer: model.layers.4.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 02:57:00,281 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_4_self_attn_q_proj.safetensors
+2025-04-28 02:57:00,281 - INFO - exists: True
+2025-04-28 02:57:00,286 - INFO - factorize_layer_kron_svd
+2025-04-28 02:57:01,489 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:57:02,716 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 02:57:03,965 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 02:57:05,038 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:57:06,260 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_4_self_attn_q_proj.safetensors True
+Layer: model.layers.4.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.2226075e-02 9.3771603e-05 6.9365597e-05 3.1357977e-05 2.4107103e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 02:57:34,754 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 02:57:34,754 - INFO - Replacing 'model.layers.4.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:  13%|█████████████████████▋                                                                                                                                                  | 29/225 [08:21<43:27, 13.30s/it]2025-04-28 02:57:34,754 - INFO - Layer: model.layers.4.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 02:57:34,755 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_4_self_attn_k_proj.safetensors
+2025-04-28 02:57:34,755 - INFO - exists: True
+2025-04-28 02:57:34,764 - INFO - factorize_layer_kron_svd
+2025-04-28 02:57:35,897 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:57:36,960 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 02:57:38,030 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 02:57:39,084 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 02:57:40,165 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 02:57:41,388 - INFO -   Factor is positive definite (alpha=1.00e+00)
+2025-04-28 02:57:42,447 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:57:43,542 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 02:57:44,614 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 02:57:45,676 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 02:57:46,747 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 02:57:47,957 - INFO -   Factor is positive definite (alpha=1.00e+00)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_4_self_attn_k_proj.safetensors True
+Layer: model.layers.4.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.5640973e-05 8.6818372e-06 8.1892204e-06 8.0699401e-06 7.7858249e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 02:58:16,985 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 02:58:16,985 - INFO - Replacing 'model.layers.4.self_attn.k_proj' (attribute 'k_proj' within parent LlamaAttention)
+Compressing Layers:  13%|██████████████████████▍                                                                                                                                                 | 30/225 [09:03<54:25, 16.74s/it]2025-04-28 02:58:16,985 - INFO - Skipping layer model.layers.4.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:58:16,985 - INFO - Skipping layer model.layers.4.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:58:16,985 - INFO - Skipping layer model.layers.4.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:58:16,986 - INFO - Skipping layer model.layers.4.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:58:16,986 - INFO - Skipping layer model.layers.4.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:58:16,986 - INFO - Skipping layer model.layers.5.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:58:16,986 - INFO - Layer: model.layers.5.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 02:58:16,987 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_5_self_attn_k_proj.safetensors
+2025-04-28 02:58:16,987 - INFO - exists: True
+2025-04-28 02:58:16,994 - INFO - factorize_layer_kron_svd
+2025-04-28 02:58:18,179 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:58:19,455 - INFO -   Factor is positive definite (alpha=1.00e-04)
+2025-04-28 02:58:20,549 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:58:21,778 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_5_self_attn_k_proj.safetensors True
+Layer: model.layers.5.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [4.8379018e-03 1.5238064e-04 9.5437594e-05 3.4556335e-05 3.0823277e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 02:58:46,659 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 02:58:46,660 - INFO - Replacing 'model.layers.5.self_attn.k_proj' (attribute 'k_proj' within parent LlamaAttention)
+Compressing Layers:  16%|███████████████████████████▋                                                                                                                                            | 37/225 [09:33<31:10,  9.95s/it]2025-04-28 02:58:46,660 - INFO - Skipping layer model.layers.5.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:58:46,660 - INFO - Skipping layer model.layers.5.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:58:46,660 - INFO - Skipping layer model.layers.5.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:58:46,660 - INFO - Skipping layer model.layers.5.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:58:46,660 - INFO - Skipping layer model.layers.5.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 02:58:46,660 - INFO - Layer: model.layers.6.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 02:58:46,661 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_6_self_attn_q_proj.safetensors
+2025-04-28 02:58:46,661 - INFO - exists: True
+2025-04-28 02:58:46,670 - INFO - factorize_layer_kron_svd
+2025-04-28 02:58:47,792 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:58:48,837 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 02:58:49,909 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 02:58:50,953 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 02:58:52,019 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 02:58:53,243 - INFO -   Factor is positive definite (alpha=1.00e+00)
+2025-04-28 02:58:54,290 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:58:55,346 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 02:58:56,392 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 02:58:57,431 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 02:58:58,468 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 02:58:59,656 - INFO -   Factor is positive definite (alpha=1.00e+00)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_6_self_attn_q_proj.safetensors True
+Layer: model.layers.6.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.2221675e-05 8.1780718e-06 7.9897936e-06 7.7061068e-06 7.4714530e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 02:59:28,027 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 02:59:28,027 - INFO - Replacing 'model.layers.6.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:  19%|████████████████████████████████                                                                                                                                        | 43/225 [10:14<26:28,  8.73s/it]2025-04-28 02:59:28,028 - INFO - Layer: model.layers.6.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 02:59:28,030 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_6_self_attn_k_proj.safetensors
+2025-04-28 02:59:28,030 - INFO - exists: True
+2025-04-28 02:59:28,039 - INFO - factorize_layer_kron_svd
+2025-04-28 02:59:29,139 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:59:30,215 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 02:59:31,311 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 02:59:32,373 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 02:59:33,454 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 02:59:34,685 - INFO -   Factor is positive definite (alpha=1.00e+00)
+2025-04-28 02:59:35,727 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 02:59:36,798 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 02:59:37,855 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 02:59:38,895 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 02:59:39,963 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 02:59:41,177 - INFO -   Factor is positive definite (alpha=1.00e+00)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_6_self_attn_k_proj.safetensors True
+Layer: model.layers.6.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.4503589e-05 7.8944504e-06 7.5118478e-06 7.3252472e-06 7.0036058e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:00:08,663 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:00:08,663 - INFO - Replacing 'model.layers.6.self_attn.k_proj' (attribute 'k_proj' within parent LlamaAttention)
+Compressing Layers:  20%|████████████████████████████████▊                                                                                                                                       | 44/225 [10:55<34:41, 11.50s/it]2025-04-28 03:00:08,664 - INFO - Skipping layer model.layers.6.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:00:08,664 - INFO - Skipping layer model.layers.6.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:00:08,664 - INFO - Skipping layer model.layers.6.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:00:08,664 - INFO - Skipping layer model.layers.6.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:00:08,664 - INFO - Skipping layer model.layers.6.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:00:08,664 - INFO - Layer: model.layers.7.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:00:08,666 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_7_self_attn_q_proj.safetensors
+2025-04-28 03:00:08,666 - INFO - exists: True
+2025-04-28 03:00:08,679 - INFO - factorize_layer_kron_svd
+2025-04-28 03:00:09,857 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:00:11,104 - INFO -   Factor is positive definite (alpha=1.00e-04)
+2025-04-28 03:00:12,178 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:00:13,416 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_7_self_attn_q_proj.safetensors True
+Layer: model.layers.7.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [4.46691271e-03 1.17237636e-04 4.46072554e-05 2.93035046e-05
+ 2.62491722e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:00:42,048 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:00:42,048 - INFO - Replacing 'model.layers.7.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:  22%|█████████████████████████████████████▎                                                                                                                                  | 50/225 [11:28<26:09,  8.97s/it]2025-04-28 03:00:42,048 - INFO - Layer: model.layers.7.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:00:42,050 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_7_self_attn_k_proj.safetensors
+2025-04-28 03:00:42,050 - INFO - exists: True
+2025-04-28 03:00:42,057 - INFO - factorize_layer_kron_svd
+2025-04-28 03:00:43,283 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:00:44,544 - INFO -   Factor is positive definite (alpha=1.00e-04)
+2025-04-28 03:00:45,589 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:00:46,805 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_7_self_attn_k_proj.safetensors True
+Layer: model.layers.7.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [4.3513221e-03 9.5677962e-05 5.9629248e-05 3.8686332e-05 2.6624961e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:01:15,234 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:01:15,234 - INFO - Replacing 'model.layers.7.self_attn.k_proj' (attribute 'k_proj' within parent LlamaAttention)
+Compressing Layers:  23%|██████████████████████████████████████                                                                                                                                  | 51/225 [12:02<32:28, 11.20s/it]2025-04-28 03:01:15,235 - INFO - Skipping layer model.layers.7.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:01:15,235 - INFO - Skipping layer model.layers.7.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:01:15,235 - INFO - Skipping layer model.layers.7.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:01:15,235 - INFO - Skipping layer model.layers.7.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:01:15,235 - INFO - Layer: model.layers.7.mlp.down_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:01:15,236 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_7_mlp_down_proj.safetensors
+2025-04-28 03:01:15,236 - INFO - exists: True
+2025-04-28 03:01:15,245 - INFO - factorize_layer_kron_svd
+2025-04-28 03:01:17,172 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:01:20,846 - INFO -   Factor is positive definite (alpha=1.00e-04)
+2025-04-28 03:01:21,881 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:01:23,050 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:01:24,300 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_7_mlp_down_proj.safetensors True
+Layer: model.layers.7.mlp.down_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=11008, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x11008)...
+  SVD complete. Singular values (top 5): [4.0638614e-03 2.6415018e-04 8.9995185e-05 2.9939682e-05 2.5749245e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,11008), (4096,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=11008, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=4096, bias=False)
+)
+2025-04-28 03:02:37,457 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=11008, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=4096, bias=False)
+)')
+2025-04-28 03:02:37,457 - INFO - Replacing 'model.layers.7.mlp.down_proj' (attribute 'down_proj' within parent LlamaMLP)
+Compressing Layers:  25%|█████████████████████████████████████████▊                                                                                                                              | 56/225 [13:24<37:24, 13.28s/it]2025-04-28 03:02:37,458 - INFO - Layer: model.layers.8.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:02:37,459 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_8_self_attn_q_proj.safetensors
+2025-04-28 03:02:37,459 - INFO - exists: True
+2025-04-28 03:02:37,469 - INFO - factorize_layer_kron_svd
+2025-04-28 03:02:38,597 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:02:39,820 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:02:41,057 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:02:42,117 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:02:43,400 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_8_self_attn_q_proj.safetensors True
+Layer: model.layers.8.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [5.8933757e-03 1.1251512e-04 4.9954931e-05 2.4490531e-05 1.9172267e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:03:12,501 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:03:12,501 - INFO - Replacing 'model.layers.8.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:  25%|██████████████████████████████████████████▌                                                                                                                             | 57/225 [13:59<43:24, 15.50s/it]2025-04-28 03:03:12,502 - INFO - Layer: model.layers.8.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:03:12,502 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_8_self_attn_k_proj.safetensors
+2025-04-28 03:03:12,502 - INFO - exists: True
+2025-04-28 03:03:12,506 - INFO - factorize_layer_kron_svd
+2025-04-28 03:03:13,609 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:03:14,681 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:03:15,732 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 03:03:16,776 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 03:03:17,814 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 03:03:19,023 - INFO -   Factor is positive definite (alpha=1.00e+00)
+2025-04-28 03:03:20,141 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:03:21,219 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:03:22,282 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 03:03:23,358 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 03:03:24,445 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 03:03:25,673 - INFO -   Factor is positive definite (alpha=1.00e+00)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_8_self_attn_k_proj.safetensors True
+Layer: model.layers.8.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.4188925e-05 7.6309198e-06 7.4526779e-06 7.2449202e-06 6.7348119e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:03:54,754 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:03:54,754 - INFO - Replacing 'model.layers.8.self_attn.k_proj' (attribute 'k_proj' within parent LlamaAttention)
+Compressing Layers:  26%|███████████████████████████████████████████▎                                                                                                                            | 58/225 [14:41<52:36, 18.90s/it]2025-04-28 03:03:54,754 - INFO - Skipping layer model.layers.8.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:03:54,755 - INFO - Skipping layer model.layers.8.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:03:54,755 - INFO - Skipping layer model.layers.8.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:03:54,755 - INFO - Skipping layer model.layers.8.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:03:54,755 - INFO - Skipping layer model.layers.8.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:03:54,755 - INFO - Skipping layer model.layers.9.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:03:54,755 - INFO - Skipping layer model.layers.9.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:03:54,755 - INFO - Skipping layer model.layers.9.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:03:54,755 - INFO - Skipping layer model.layers.9.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:03:54,755 - INFO - Skipping layer model.layers.9.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:03:54,755 - INFO - Skipping layer model.layers.9.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:03:54,755 - INFO - Skipping layer model.layers.9.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:03:54,755 - INFO - Skipping layer model.layers.10.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:03:54,755 - INFO - Skipping layer model.layers.10.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:03:54,755 - INFO - Layer: model.layers.10.self_attn.v_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:03:54,757 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_10_self_attn_v_proj.safetensors
+2025-04-28 03:03:54,757 - INFO - exists: True
+2025-04-28 03:03:54,761 - INFO - factorize_layer_kron_svd
+2025-04-28 03:03:55,900 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:03:57,129 - INFO -   Factor is positive definite (alpha=1.00e-04)
+2025-04-28 03:03:58,176 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:03:59,369 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:04:00,597 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_10_self_attn_v_proj.safetensors True
+Layer: model.layers.10.self_attn.v_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.9614631e-03 5.2652311e-05 1.7582579e-05 1.3576366e-05 1.1561120e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:04:29,575 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:04:29,576 - INFO - Replacing 'model.layers.10.self_attn.v_proj' (attribute 'v_proj' within parent LlamaAttention)
+Compressing Layers:  32%|██████████████████████████████████████████████████████▌                                                                                                                 | 73/225 [15:16<17:09,  6.77s/it]2025-04-28 03:04:29,576 - INFO - Skipping layer model.layers.10.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:04:29,576 - INFO - Skipping layer model.layers.10.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:04:29,576 - INFO - Skipping layer model.layers.10.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:04:29,576 - INFO - Skipping layer model.layers.10.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:04:29,576 - INFO - Layer: model.layers.11.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:04:29,577 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_11_self_attn_q_proj.safetensors
+2025-04-28 03:04:29,577 - INFO - exists: True
+2025-04-28 03:04:29,581 - INFO - factorize_layer_kron_svd
+2025-04-28 03:04:30,739 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:04:32,007 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:04:33,283 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:04:34,363 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:04:35,518 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:04:36,806 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_11_self_attn_q_proj.safetensors True
+Layer: model.layers.11.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [2.6593389e-02 3.8675182e-05 2.0216057e-05 1.6013246e-05 1.3640273e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:05:05,895 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:05:05,895 - INFO - Replacing 'model.layers.11.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:  35%|██████████████████████████████████████████████████████████▏                                                                                                             | 78/225 [15:52<16:54,  6.90s/it]2025-04-28 03:05:05,895 - INFO - Skipping layer model.layers.11.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:05:05,895 - INFO - Skipping layer model.layers.11.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:05:05,895 - INFO - Skipping layer model.layers.11.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:05:05,895 - INFO - Skipping layer model.layers.11.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:05:05,895 - INFO - Skipping layer model.layers.11.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:05:05,895 - INFO - Skipping layer model.layers.11.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:05:05,895 - INFO - Layer: model.layers.12.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:05:05,897 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_12_self_attn_q_proj.safetensors
+2025-04-28 03:05:05,897 - INFO - exists: True
+2025-04-28 03:05:05,933 - INFO - factorize_layer_kron_svd
+2025-04-28 03:05:07,076 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:05:08,326 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:05:09,588 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:05:10,644 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:05:11,835 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:05:13,109 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_12_self_attn_q_proj.safetensors True
+Layer: model.layers.12.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [9.15819407e-03 3.75725394e-05 2.34514755e-05 1.29712425e-05
+ 1.20524883e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:05:42,820 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:05:42,821 - INFO - Replacing 'model.layers.12.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:  38%|███████████████████████████████████████████████████████████████▍                                                                                                        | 85/225 [16:29<14:48,  6.35s/it]2025-04-28 03:05:42,821 - INFO - Layer: model.layers.12.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:05:42,822 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_12_self_attn_k_proj.safetensors
+2025-04-28 03:05:42,822 - INFO - exists: True
+2025-04-28 03:05:42,826 - INFO - factorize_layer_kron_svd
+2025-04-28 03:05:43,937 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:05:44,998 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:05:46,054 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 03:05:47,111 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 03:05:48,170 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 03:05:49,381 - INFO -   Factor is positive definite (alpha=1.00e+00)
+2025-04-28 03:05:50,420 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:05:51,484 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:05:52,533 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 03:05:53,592 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 03:05:54,684 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 03:05:55,912 - INFO -   Factor is positive definite (alpha=1.00e+00)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_12_self_attn_k_proj.safetensors True
+Layer: model.layers.12.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.35002065e-05 7.74964155e-06 7.61668571e-06 7.45528405e-06
+ 7.28192163e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:06:22,558 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:06:22,559 - INFO - Replacing 'model.layers.12.self_attn.k_proj' (attribute 'k_proj' within parent LlamaAttention)
+Compressing Layers:  38%|████████████████████████████████████████████████████████████████▏                                                                                                       | 86/225 [17:09<19:43,  8.52s/it]2025-04-28 03:06:22,559 - INFO - Skipping layer model.layers.12.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:06:22,559 - INFO - Skipping layer model.layers.12.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:06:22,559 - INFO - Layer: model.layers.12.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:06:22,562 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_12_mlp_gate_proj.safetensors
+2025-04-28 03:06:22,562 - INFO - exists: True
+2025-04-28 03:06:22,567 - INFO - factorize_layer_kron_svd
+2025-04-28 03:06:23,822 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:06:24,893 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:06:25,936 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 03:06:26,973 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 03:06:28,013 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 03:06:29,196 - INFO -   Factor is positive definite (alpha=1.00e+00)
+2025-04-28 03:06:30,908 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:06:32,877 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:06:34,785 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 03:06:36,664 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 03:06:38,548 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 03:06:41,622 - INFO -   Factor is positive definite (alpha=1.00e+00)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_12_mlp_gate_proj.safetensors True
+Layer: model.layers.12.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [1.2988171e-05 7.1681275e-06 6.5595987e-06 6.5212694e-06 6.4388596e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 03:07:29,050 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 03:07:29,050 - INFO - Replacing 'model.layers.12.mlp.gate_proj' (attribute 'gate_proj' within parent LlamaMLP)
+Compressing Layers:  40%|██████████████████████████████████████████████████████████████████▍                                                                                                     | 89/225 [18:15<26:02, 11.49s/it]2025-04-28 03:07:29,050 - INFO - Layer: model.layers.12.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:07:29,053 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_12_mlp_up_proj.safetensors
+2025-04-28 03:07:29,053 - INFO - exists: True
+2025-04-28 03:07:29,066 - INFO - factorize_layer_kron_svd
+2025-04-28 03:07:30,252 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:07:31,343 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:07:32,408 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 03:07:33,510 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 03:07:34,584 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 03:07:35,798 - INFO -   Factor is positive definite (alpha=1.00e+00)
+2025-04-28 03:07:37,508 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:07:39,448 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:07:41,350 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 03:07:43,267 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 03:07:45,189 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 03:07:48,340 - INFO -   Factor is positive definite (alpha=1.00e+00)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_12_mlp_up_proj.safetensors True
+Layer: model.layers.12.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [5.9819213e-06 4.8709753e-06 4.7432140e-06 4.6781370e-06 4.6636528e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 03:08:34,975 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 03:08:34,975 - INFO - Replacing 'model.layers.12.mlp.up_proj' (attribute 'up_proj' within parent LlamaMLP)
+Compressing Layers:  40%|███████████████████████████████████████████████████████████████████▏                                                                                                    | 90/225 [19:21<37:22, 16.61s/it]2025-04-28 03:08:34,976 - INFO - Skipping layer model.layers.12.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:08:34,976 - INFO - Layer: model.layers.13.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:08:34,978 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_13_self_attn_q_proj.safetensors
+2025-04-28 03:08:34,978 - INFO - exists: True
+2025-04-28 03:08:34,987 - INFO - factorize_layer_kron_svd
+2025-04-28 03:08:36,184 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:08:37,385 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:08:38,625 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:08:39,711 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:08:40,878 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:08:42,115 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_13_self_attn_q_proj.safetensors True
+Layer: model.layers.13.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.9350363e-02 5.4489075e-05 1.5019226e-05 1.3564231e-05 1.1421780e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:09:04,074 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:09:04,075 - INFO - Replacing 'model.layers.13.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:  41%|████████████████████████████████████████████████████████████████████▋                                                                                                   | 92/225 [19:50<35:50, 16.17s/it]2025-04-28 03:09:04,075 - INFO - Layer: model.layers.13.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:09:04,076 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_13_self_attn_k_proj.safetensors
+2025-04-28 03:09:04,076 - INFO - exists: True
+2025-04-28 03:09:04,083 - INFO - factorize_layer_kron_svd
+2025-04-28 03:09:05,179 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:09:06,260 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:09:07,307 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 03:09:08,354 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 03:09:09,423 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 03:09:10,622 - INFO -   Factor is positive definite (alpha=1.00e+00)
+2025-04-28 03:09:11,694 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:09:12,761 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:09:13,850 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 03:09:14,958 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 03:09:16,020 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 03:09:17,223 - INFO -   Factor is positive definite (alpha=1.00e+00)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_13_self_attn_k_proj.safetensors True
+Layer: model.layers.13.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.3729892e-05 7.1575278e-06 7.1094173e-06 6.8093209e-06 6.5548347e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:09:39,368 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:09:39,368 - INFO - Replacing 'model.layers.13.self_attn.k_proj' (attribute 'k_proj' within parent LlamaAttention)
+Compressing Layers:  41%|█████████████████████████████████████████████████████████████████████▍                                                                                                  | 93/225 [20:26<41:06, 18.68s/it]2025-04-28 03:09:39,369 - INFO - Layer: model.layers.13.self_attn.v_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:09:39,371 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_13_self_attn_v_proj.safetensors
+2025-04-28 03:09:39,371 - INFO - exists: True
+2025-04-28 03:09:39,379 - INFO - factorize_layer_kron_svd
+2025-04-28 03:09:40,526 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:09:41,732 - INFO -   Factor is positive definite (alpha=1.00e-04)
+2025-04-28 03:09:42,819 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:09:44,017 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:09:45,247 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_13_self_attn_v_proj.safetensors True
+Layer: model.layers.13.self_attn.v_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [5.0983722e-03 5.0585440e-05 2.1063875e-05 1.7282286e-05 1.4230653e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:10:10,549 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:10:10,550 - INFO - Replacing 'model.layers.13.self_attn.v_proj' (attribute 'v_proj' within parent LlamaAttention)
+Compressing Layers:  42%|██████████████████████████████████████████████████████████████████████▏                                                                                                 | 94/225 [20:57<45:06, 20.66s/it]2025-04-28 03:10:10,550 - INFO - Layer: model.layers.13.self_attn.o_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:10:10,551 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_13_self_attn_o_proj.safetensors
+2025-04-28 03:10:10,551 - INFO - exists: True
+2025-04-28 03:10:10,557 - INFO - factorize_layer_kron_svd
+2025-04-28 03:10:11,695 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:10:12,857 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:10:14,135 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:10:15,200 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:10:16,397 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:10:17,647 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_13_self_attn_o_proj.safetensors True
+Layer: model.layers.13.self_attn.o_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.2446343e-02 3.8981681e-05 3.5099336e-05 2.8158551e-05 2.2302480e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:10:46,251 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:10:46,251 - INFO - Replacing 'model.layers.13.self_attn.o_proj' (attribute 'o_proj' within parent LlamaAttention)
+Compressing Layers:  42%|██████████████████████████████████████████████████████████████████████▉                                                                                                 | 95/225 [21:33<50:45, 23.43s/it]2025-04-28 03:10:46,251 - INFO - Skipping layer model.layers.13.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:10:46,251 - INFO - Layer: model.layers.13.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:10:46,258 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_13_mlp_up_proj.safetensors
+2025-04-28 03:10:46,258 - INFO - exists: True
+2025-04-28 03:10:46,274 - INFO - factorize_layer_kron_svd
+2025-04-28 03:10:47,488 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:10:48,648 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:10:49,892 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:10:51,518 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:10:54,570 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:10:58,137 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_13_mlp_up_proj.safetensors True
+Layer: model.layers.13.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [6.4682798e-03 6.1749437e-05 2.4349400e-05 2.1919277e-05 2.0116417e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 03:12:01,105 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 03:12:01,105 - INFO - Replacing 'model.layers.13.mlp.up_proj' (attribute 'up_proj' within parent LlamaMLP)
+Compressing Layers:  43%|███████████████████████████████████████████████████████████████████████▌                                                                                              | 97/225 [22:47<1:00:16, 28.25s/it]2025-04-28 03:12:01,105 - INFO - Skipping layer model.layers.13.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:12:01,105 - INFO - Skipping layer model.layers.14.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:12:01,105 - INFO - Skipping layer model.layers.14.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:12:01,105 - INFO - Skipping layer model.layers.14.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:12:01,106 - INFO - Skipping layer model.layers.14.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:12:01,106 - INFO - Layer: model.layers.14.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:12:01,108 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_14_mlp_gate_proj.safetensors
+2025-04-28 03:12:01,108 - INFO - exists: True
+2025-04-28 03:12:01,119 - INFO - factorize_layer_kron_svd
+2025-04-28 03:12:02,328 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:12:03,508 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:12:04,730 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:12:06,533 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:12:10,219 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_14_mlp_gate_proj.safetensors True
+Layer: model.layers.14.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [3.2148813e-03 8.8560395e-05 2.4315630e-05 1.8305876e-05 1.6133905e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 03:13:15,063 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 03:13:15,063 - INFO - Replacing 'model.layers.14.mlp.gate_proj' (attribute 'gate_proj' within parent LlamaMLP)
+Compressing Layers:  46%|████████████████████████████████████████████████████████████████████████████▍                                                                                          | 103/225 [24:01<38:08, 18.76s/it]2025-04-28 03:13:15,064 - INFO - Layer: model.layers.14.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:13:15,084 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_14_mlp_up_proj.safetensors
+2025-04-28 03:13:15,084 - INFO - exists: True
+2025-04-28 03:13:15,166 - INFO - factorize_layer_kron_svd
+2025-04-28 03:13:16,341 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:13:17,513 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:13:18,763 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:13:20,511 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:13:23,668 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:13:27,303 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_14_mlp_up_proj.safetensors True
+Layer: model.layers.14.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [9.7202640e-03 2.5967920e-05 2.1275189e-05 1.6423986e-05 1.5875536e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 03:14:23,885 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 03:14:23,885 - INFO - Replacing 'model.layers.14.mlp.up_proj' (attribute 'up_proj' within parent LlamaMLP)
+Compressing Layers:  46%|█████████████████████████████████████████████████████████████████████████████▏                                                                                         | 104/225 [25:10<50:22, 24.98s/it]2025-04-28 03:14:23,886 - INFO - Skipping layer model.layers.14.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:14:23,886 - INFO - Layer: model.layers.15.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:14:23,891 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_15_self_attn_q_proj.safetensors
+2025-04-28 03:14:23,891 - INFO - exists: True
+2025-04-28 03:14:23,902 - INFO - factorize_layer_kron_svd
+2025-04-28 03:14:25,010 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:14:26,184 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:14:27,397 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:14:28,444 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:14:29,558 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:14:30,762 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_15_self_attn_q_proj.safetensors True
+Layer: model.layers.15.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.19919665e-02 7.38329763e-05 2.44418788e-05 1.36780509e-05
+ 1.00903217e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:14:53,352 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:14:53,352 - INFO - Replacing 'model.layers.15.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:  47%|██████████████████████████████████████████████████████████████████████████████▋                                                                                        | 106/225 [25:40<44:13, 22.29s/it]2025-04-28 03:14:53,353 - INFO - Skipping layer model.layers.15.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:14:53,353 - INFO - Skipping layer model.layers.15.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:14:53,353 - INFO - Skipping layer model.layers.15.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:14:53,353 - INFO - Skipping layer model.layers.15.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:14:53,353 - INFO - Skipping layer model.layers.15.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:14:53,353 - INFO - Skipping layer model.layers.15.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:14:53,353 - INFO - Skipping layer model.layers.16.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:14:53,353 - INFO - Skipping layer model.layers.16.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:14:53,353 - INFO - Layer: model.layers.16.self_attn.v_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:14:53,354 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_16_self_attn_v_proj.safetensors
+2025-04-28 03:14:53,354 - INFO - exists: True
+2025-04-28 03:14:53,359 - INFO - factorize_layer_kron_svd
+2025-04-28 03:14:54,464 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:14:55,662 - INFO -   Factor is positive definite (alpha=1.00e-04)
+2025-04-28 03:14:56,693 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:14:57,818 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:14:59,022 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_16_self_attn_v_proj.safetensors True
+Layer: model.layers.16.self_attn.v_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [2.1955712e-02 2.2352620e-05 1.8913308e-05 1.6113720e-05 1.5723988e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:15:22,250 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:15:22,251 - INFO - Replacing 'model.layers.16.self_attn.v_proj' (attribute 'v_proj' within parent LlamaAttention)
+Compressing Layers:  51%|█████████████████████████████████████████████████████████████████████████████████████▎                                                                                 | 115/225 [26:09<18:54, 10.32s/it]2025-04-28 03:15:22,251 - INFO - Skipping layer model.layers.16.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:15:22,252 - INFO - Skipping layer model.layers.16.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:15:22,252 - INFO - Skipping layer model.layers.16.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:15:22,252 - INFO - Skipping layer model.layers.16.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:15:22,252 - INFO - Layer: model.layers.17.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:15:22,253 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_17_self_attn_q_proj.safetensors
+2025-04-28 03:15:22,253 - INFO - exists: True
+2025-04-28 03:15:22,259 - INFO - factorize_layer_kron_svd
+2025-04-28 03:15:23,394 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:15:24,601 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:15:25,853 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:15:26,895 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:15:28,083 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:15:29,325 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_17_self_attn_q_proj.safetensors True
+Layer: model.layers.17.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.9799747e-02 3.0997286e-05 1.8318075e-05 1.5734129e-05 9.7556685e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:15:59,330 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:15:59,330 - INFO - Replacing 'model.layers.17.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:  53%|█████████████████████████████████████████████████████████████████████████████████████████                                                                              | 120/225 [26:46<16:22,  9.35s/it]2025-04-28 03:15:59,331 - INFO - Skipping layer model.layers.17.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:15:59,331 - INFO - Skipping layer model.layers.17.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:15:59,331 - INFO - Skipping layer model.layers.17.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:15:59,331 - INFO - Skipping layer model.layers.17.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:15:59,331 - INFO - Skipping layer model.layers.17.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:15:59,331 - INFO - Skipping layer model.layers.17.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:15:59,331 - INFO - Layer: model.layers.18.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:15:59,333 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_18_self_attn_q_proj.safetensors
+2025-04-28 03:15:59,333 - INFO - exists: True
+2025-04-28 03:15:59,338 - INFO - factorize_layer_kron_svd
+2025-04-28 03:16:00,453 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:16:01,663 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:16:02,911 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:16:03,982 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:16:05,083 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:16:06,334 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_18_self_attn_q_proj.safetensors True
+Layer: model.layers.18.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [4.0405821e-03 8.4903695e-05 8.4368939e-06 7.6583383e-06 6.2006247e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:16:34,855 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:16:34,855 - INFO - Replacing 'model.layers.18.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:  56%|██████████████████████████████████████████████████████████████████████████████████████████████▎                                                                        | 127/225 [27:21<12:29,  7.64s/it]2025-04-28 03:16:34,855 - INFO - Layer: model.layers.18.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:16:34,856 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_18_self_attn_k_proj.safetensors
+2025-04-28 03:16:34,856 - INFO - exists: True
+2025-04-28 03:16:34,862 - INFO - factorize_layer_kron_svd
+2025-04-28 03:16:36,035 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:16:37,206 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:16:38,462 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:16:39,508 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:16:40,719 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:16:41,975 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_18_self_attn_k_proj.safetensors True
+Layer: model.layers.18.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [7.7125463e-03 3.3378132e-05 8.2256274e-06 7.4304949e-06 6.1785499e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:17:10,260 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:17:10,260 - INFO - Replacing 'model.layers.18.self_attn.k_proj' (attribute 'k_proj' within parent LlamaAttention)
+Compressing Layers:  57%|███████████████████████████████████████████████████████████████████████████████████████████████                                                                        | 128/225 [27:57<15:44,  9.74s/it]2025-04-28 03:17:10,260 - INFO - Skipping layer model.layers.18.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:17:10,260 - INFO - Skipping layer model.layers.18.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:17:10,260 - INFO - Skipping layer model.layers.18.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:17:10,260 - INFO - Layer: model.layers.18.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:17:10,262 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_18_mlp_up_proj.safetensors
+2025-04-28 03:17:10,262 - INFO - exists: True
+2025-04-28 03:17:10,267 - INFO - factorize_layer_kron_svd
+2025-04-28 03:17:11,489 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:17:12,655 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:17:13,905 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:17:15,700 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:17:19,352 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_18_mlp_up_proj.safetensors True
+Layer: model.layers.18.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [5.7937209e-03 2.0253658e-05 1.6411330e-05 1.4584949e-05 1.2499403e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 03:18:23,457 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 03:18:23,457 - INFO - Replacing 'model.layers.18.mlp.up_proj' (attribute 'up_proj' within parent LlamaMLP)
+Compressing Layers:  59%|█████████████████████████████████████████████████████████████████████████████████████████████████▉                                                                     | 132/225 [29:10<19:05, 12.31s/it]2025-04-28 03:18:23,458 - INFO - Skipping layer model.layers.18.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:18:23,458 - INFO - Layer: model.layers.19.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:18:23,460 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_19_self_attn_q_proj.safetensors
+2025-04-28 03:18:23,460 - INFO - exists: True
+2025-04-28 03:18:23,470 - INFO - factorize_layer_kron_svd
+2025-04-28 03:18:24,629 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:18:25,893 - INFO -   Factor is positive definite (alpha=1.00e-04)
+2025-04-28 03:18:26,959 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:18:28,191 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_19_self_attn_q_proj.safetensors True
+Layer: model.layers.19.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [2.2634035e-03 7.5883843e-05 1.0972199e-05 7.9327338e-06 7.6394726e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:18:56,848 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:18:56,849 - INFO - Replacing 'model.layers.19.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:  60%|███████████████████████████████████████████████████████████████████████████████████████████████████▍                                                                   | 134/225 [29:43<19:51, 13.09s/it]2025-04-28 03:18:56,849 - INFO - Skipping layer model.layers.19.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:18:56,849 - INFO - Skipping layer model.layers.19.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:18:56,849 - INFO - Skipping layer model.layers.19.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:18:56,849 - INFO - Skipping layer model.layers.19.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:18:56,849 - INFO - Layer: model.layers.19.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:18:56,850 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_19_mlp_up_proj.safetensors
+2025-04-28 03:18:56,850 - INFO - exists: True
+2025-04-28 03:18:56,857 - INFO - factorize_layer_kron_svd
+2025-04-28 03:18:58,129 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:18:59,330 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:19:00,595 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:19:02,381 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:19:06,130 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_19_mlp_up_proj.safetensors True
+Layer: model.layers.19.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [5.9256121e-03 1.7187345e-05 1.4408997e-05 1.2730728e-05 9.7351012e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 03:20:07,631 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 03:20:07,632 - INFO - Replacing 'model.layers.19.mlp.up_proj' (attribute 'up_proj' within parent LlamaMLP)
+Compressing Layers:  62%|███████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                               | 139/225 [30:54<19:21, 13.50s/it]2025-04-28 03:20:07,632 - INFO - Skipping layer model.layers.19.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:20:07,632 - INFO - Layer: model.layers.20.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:20:07,634 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_20_self_attn_q_proj.safetensors
+2025-04-28 03:20:07,634 - INFO - exists: True
+2025-04-28 03:20:07,653 - INFO - factorize_layer_kron_svd
+2025-04-28 03:20:08,750 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:20:10,020 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:20:11,251 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:20:12,311 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:20:13,547 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_20_self_attn_q_proj.safetensors True
+Layer: model.layers.20.self_attn.q_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [4.4606850e-03 4.5190627e-05 1.3593499e-05 8.2705919e-06 6.7053229e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:20:43,240 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:20:43,240 - INFO - Replacing 'model.layers.20.self_attn.q_proj' (attribute 'q_proj' within parent LlamaAttention)
+Compressing Layers:  63%|████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                              | 141/225 [31:30<19:59, 14.28s/it]2025-04-28 03:20:43,241 - INFO - Skipping layer model.layers.20.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:20:43,241 - INFO - Skipping layer model.layers.20.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:20:43,241 - INFO - Skipping layer model.layers.20.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:20:43,241 - INFO - Layer: model.layers.20.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:20:43,241 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_20_mlp_gate_proj.safetensors
+2025-04-28 03:20:43,241 - INFO - exists: True
+2025-04-28 03:20:43,246 - INFO - factorize_layer_kron_svd
+2025-04-28 03:20:44,518 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:20:45,721 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:20:46,972 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:20:48,826 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:20:52,546 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_20_mlp_gate_proj.safetensors True
+Layer: model.layers.20.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [5.6294589e-03 2.1218650e-05 1.5237835e-05 1.4524096e-05 1.3646030e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 03:21:50,776 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 03:21:50,776 - INFO - Replacing 'model.layers.20.mlp.gate_proj' (attribute 'gate_proj' within parent LlamaMLP)
+Compressing Layers:  64%|███████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                           | 145/225 [32:37<20:13, 15.17s/it]2025-04-28 03:21:50,776 - INFO - Skipping layer model.layers.20.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:21:50,777 - INFO - Skipping layer model.layers.20.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:21:50,777 - INFO - Skipping layer model.layers.21.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:21:50,777 - INFO - Skipping layer model.layers.21.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:21:50,777 - INFO - Skipping layer model.layers.21.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:21:50,777 - INFO - Skipping layer model.layers.21.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:21:50,777 - INFO - Skipping layer model.layers.21.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:21:50,777 - INFO - Layer: model.layers.21.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:21:50,779 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_21_mlp_up_proj.safetensors
+2025-04-28 03:21:50,779 - INFO - exists: True
+2025-04-28 03:21:50,790 - INFO - factorize_layer_kron_svd
+2025-04-28 03:21:51,999 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:21:53,198 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:21:54,469 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:21:56,363 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:22:00,125 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_21_mlp_up_proj.safetensors True
+Layer: model.layers.21.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [1.8695735e-03 5.5963137e-05 1.4356574e-05 1.3274203e-05 1.2030486e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 03:23:04,576 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 03:23:04,576 - INFO - Replacing 'model.layers.21.mlp.up_proj' (attribute 'up_proj' within parent LlamaMLP)
+Compressing Layers:  68%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                     | 153/225 [33:51<14:40, 12.24s/it]2025-04-28 03:23:04,577 - INFO - Layer: model.layers.21.mlp.down_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:23:04,578 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_21_mlp_down_proj.safetensors
+2025-04-28 03:23:04,578 - INFO - exists: True
+2025-04-28 03:23:04,591 - INFO - factorize_layer_kron_svd
+2025-04-28 03:23:06,345 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:23:08,739 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:23:12,467 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:23:13,518 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:23:14,690 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:23:15,932 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_21_mlp_down_proj.safetensors True
+Layer: model.layers.21.mlp.down_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=11008, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x11008)...
+  SVD complete. Singular values (top 5): [4.5640193e-02 9.2487091e-05 5.4519722e-05 4.7700971e-05 3.9835424e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,11008), (4096,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=11008, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=4096, bias=False)
+)
+2025-04-28 03:24:22,600 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=11008, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=4096, bias=False)
+)')
+2025-04-28 03:24:22,600 - INFO - Replacing 'model.layers.21.mlp.down_proj' (attribute 'down_proj' within parent LlamaMLP)
+Compressing Layers:  68%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                    | 154/225 [35:09<20:47, 17.56s/it]2025-04-28 03:24:22,600 - INFO - Skipping layer model.layers.22.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:24:22,600 - INFO - Skipping layer model.layers.22.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:24:22,600 - INFO - Skipping layer model.layers.22.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:24:22,600 - INFO - Skipping layer model.layers.22.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:24:22,600 - INFO - Skipping layer model.layers.22.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:24:22,600 - INFO - Layer: model.layers.22.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:24:22,602 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_22_mlp_up_proj.safetensors
+2025-04-28 03:24:22,602 - INFO - exists: True
+2025-04-28 03:24:22,614 - INFO - factorize_layer_kron_svd
+2025-04-28 03:24:23,872 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:24:25,109 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:24:26,358 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:24:28,240 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:24:31,962 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_22_mlp_up_proj.safetensors True
+Layer: model.layers.22.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [1.2615041e-03 2.1604352e-05 1.3284305e-05 1.1028132e-05 1.0561911e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 03:25:35,896 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 03:25:35,896 - INFO - Replacing 'model.layers.22.mlp.up_proj' (attribute 'up_proj' within parent LlamaMLP)
+Compressing Layers:  71%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                | 160/225 [36:22<16:39, 15.37s/it]2025-04-28 03:25:35,896 - INFO - Layer: model.layers.22.mlp.down_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:25:35,898 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_22_mlp_down_proj.safetensors
+2025-04-28 03:25:35,898 - INFO - exists: True
+2025-04-28 03:25:35,910 - INFO - factorize_layer_kron_svd
+2025-04-28 03:25:37,678 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:25:40,035 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:25:43,728 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:25:44,791 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:25:45,964 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:25:47,240 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_22_mlp_down_proj.safetensors True
+Layer: model.layers.22.mlp.down_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=11008, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x11008)...
+  SVD complete. Singular values (top 5): [2.3855805e-02 8.0862206e-05 5.0205126e-05 4.2752916e-05 3.9248724e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,11008), (4096,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=11008, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=4096, bias=False)
+)
+2025-04-28 03:26:59,712 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=11008, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=4096, bias=False)
+)')
+2025-04-28 03:26:59,713 - INFO - Replacing 'model.layers.22.mlp.down_proj' (attribute 'down_proj' within parent LlamaMLP)
+Compressing Layers:  72%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                               | 161/225 [37:46<22:53, 21.46s/it]2025-04-28 03:26:59,713 - INFO - Skipping layer model.layers.23.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:26:59,713 - INFO - Skipping layer model.layers.23.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:26:59,713 - INFO - Skipping layer model.layers.23.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:26:59,713 - INFO - Skipping layer model.layers.23.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:26:59,713 - INFO - Layer: model.layers.23.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:26:59,715 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_23_mlp_gate_proj.safetensors
+2025-04-28 03:26:59,715 - INFO - exists: True
+2025-04-28 03:26:59,728 - INFO - factorize_layer_kron_svd
+2025-04-28 03:27:00,971 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:27:02,150 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:27:03,468 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:27:05,355 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:27:08,988 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_23_mlp_gate_proj.safetensors True
+Layer: model.layers.23.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [1.6312244e-03 1.5538668e-05 4.1256385e-06 2.1622898e-06 2.0991954e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 03:28:11,849 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 03:28:11,850 - INFO - Replacing 'model.layers.23.mlp.gate_proj' (attribute 'gate_proj' within parent LlamaMLP)
+Compressing Layers:  74%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                           | 166/225 [38:58<18:24, 18.73s/it]2025-04-28 03:28:11,850 - INFO - Skipping layer model.layers.23.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:28:11,850 - INFO - Layer: model.layers.23.mlp.down_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:28:11,853 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_23_mlp_down_proj.safetensors
+2025-04-28 03:28:11,853 - INFO - exists: True
+2025-04-28 03:28:11,864 - INFO - factorize_layer_kron_svd
+2025-04-28 03:28:13,688 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:28:16,067 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:28:19,221 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:28:20,306 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:28:21,464 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:28:22,679 - INFO -   Factor is positive definite (alpha=1.00e-03)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_23_mlp_down_proj.safetensors True
+Layer: model.layers.23.mlp.down_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=11008, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x11008)...
+  SVD complete. Singular values (top 5): [6.6739982e-03 2.3223182e-04 4.9300255e-05 3.7862912e-05 3.5104458e-05]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,11008), (4096,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=11008, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=4096, bias=False)
+)
+2025-04-28 03:29:34,499 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=11008, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=4096, bias=False)
+)')
+2025-04-28 03:29:34,499 - INFO - Replacing 'model.layers.23.mlp.down_proj' (attribute 'down_proj' within parent LlamaMLP)
+Compressing Layers:  75%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                          | 168/225 [40:21<21:41, 22.83s/it]2025-04-28 03:29:34,500 - INFO - Skipping layer model.layers.24.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:29:34,500 - INFO - Skipping layer model.layers.24.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:29:34,500 - INFO - Skipping layer model.layers.24.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:29:34,500 - INFO - Skipping layer model.layers.24.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:29:34,500 - INFO - Skipping layer model.layers.24.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:29:34,500 - INFO - Skipping layer model.layers.24.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:29:34,500 - INFO - Skipping layer model.layers.24.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:29:34,500 - INFO - Skipping layer model.layers.25.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:29:34,500 - INFO - Skipping layer model.layers.25.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:29:34,500 - INFO - Skipping layer model.layers.25.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:29:34,500 - INFO - Skipping layer model.layers.25.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:29:34,500 - INFO - Skipping layer model.layers.25.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:29:34,500 - INFO - Layer: model.layers.25.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:29:34,502 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_25_mlp_up_proj.safetensors
+2025-04-28 03:29:34,502 - INFO - exists: True
+2025-04-28 03:29:34,515 - INFO - factorize_layer_kron_svd
+2025-04-28 03:29:35,721 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:29:36,916 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:29:38,130 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:29:39,968 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:29:43,639 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_25_mlp_up_proj.safetensors True
+Layer: model.layers.25.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [5.2369884e-03 1.2808485e-05 1.0910483e-05 1.0035876e-05 9.8339870e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 03:30:41,329 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 03:30:41,330 - INFO - Replacing 'model.layers.25.mlp.up_proj' (attribute 'up_proj' within parent LlamaMLP)
+Compressing Layers:  80%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                | 181/225 [41:28<08:35, 11.73s/it]2025-04-28 03:30:41,330 - INFO - Skipping layer model.layers.25.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:30:41,330 - INFO - Skipping layer model.layers.26.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:30:41,330 - INFO - Skipping layer model.layers.26.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:30:41,330 - INFO - Skipping layer model.layers.26.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:30:41,330 - INFO - Skipping layer model.layers.26.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:30:41,330 - INFO - Layer: model.layers.26.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:30:41,332 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_26_mlp_gate_proj.safetensors
+2025-04-28 03:30:41,332 - INFO - exists: True
+2025-04-28 03:30:41,344 - INFO - factorize_layer_kron_svd
+2025-04-28 03:30:42,552 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:30:43,775 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:30:45,043 - INFO -   Factor is positive definite (alpha=1.00e-03)
+2025-04-28 03:30:46,890 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:30:50,570 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_26_mlp_gate_proj.safetensors True
+Layer: model.layers.26.mlp.gate_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Factor is positive definite (alpha=1.00e-03)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [3.5354062e-03 1.2539586e-05 5.3919930e-06 4.6146652e-06 4.4492190e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 03:31:52,622 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 03:31:52,622 - INFO - Replacing 'model.layers.26.mlp.gate_proj' (attribute 'gate_proj' within parent LlamaMLP)
+Compressing Layers:  83%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                            | 187/225 [42:39<07:27, 11.77s/it]2025-04-28 03:31:52,622 - INFO - Layer: model.layers.26.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+2025-04-28 03:31:52,624 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_26_mlp_up_proj.safetensors
+2025-04-28 03:31:52,625 - INFO - exists: True
+2025-04-28 03:31:52,647 - INFO - factorize_layer_kron_svd
+2025-04-28 03:31:53,866 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:31:55,105 - INFO -   Factor is positive definite (alpha=1.00e-04)
+2025-04-28 03:31:56,926 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:32:00,527 - INFO -   Factor is positive definite (alpha=1.00e-04)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_26_mlp_up_proj.safetensors True
+Layer: model.layers.26.mlp.up_proj | Ratio: 0.500 -> Target Rank: 1496 (Align: 8)
+layer module Linear(in_features=4096, out_features=11008, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Factor is positive definite (alpha=1.00e-04)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (11008x4096)...
+  SVD complete. Singular values (top 5): [5.6883384e-04 1.2054178e-04 1.2884599e-05 1.1027682e-05 9.3955405e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (1496,4096), (11008,1496)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)
+2025-04-28 03:33:05,000 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=1496, bias=False)
+  (1): Linear(in_features=1496, out_features=11008, bias=False)
+)')
+2025-04-28 03:33:05,000 - INFO - Replacing 'model.layers.26.mlp.up_proj' (attribute 'up_proj' within parent LlamaMLP)
+Compressing Layers:  84%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                           | 188/225 [43:51<09:41, 15.72s/it]2025-04-28 03:33:05,001 - INFO - Skipping layer model.layers.26.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:05,001 - INFO - Skipping layer model.layers.27.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:05,001 - INFO - Skipping layer model.layers.27.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:05,001 - INFO - Skipping layer model.layers.27.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:05,001 - INFO - Skipping layer model.layers.27.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:05,001 - INFO - Skipping layer model.layers.27.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:05,001 - INFO - Skipping layer model.layers.27.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:05,001 - INFO - Skipping layer model.layers.27.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:05,001 - INFO - Skipping layer model.layers.28.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:05,001 - INFO - Layer: model.layers.28.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+2025-04-28 03:33:05,003 - INFO - factor_filename: /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_28_self_attn_k_proj.safetensors
+2025-04-28 03:33:05,003 - INFO - exists: True
+2025-04-28 03:33:05,013 - INFO - factorize_layer_kron_svd
+2025-04-28 03:33:06,069 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:33:07,108 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:33:08,142 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 03:33:09,177 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 03:33:10,215 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 03:33:11,423 - INFO -   Factor is positive definite (alpha=1.00e+00)
+2025-04-28 03:33:12,466 - INFO -   Regularizing factor (try 1, alpha=1.00e-05)
+2025-04-28 03:33:13,526 - INFO -   Regularizing factor (try 2, alpha=1.00e-04)
+2025-04-28 03:33:14,590 - INFO -   Regularizing factor (try 3, alpha=1.00e-03)
+2025-04-28 03:33:15,632 - INFO -   Regularizing factor (try 4, alpha=1.00e-02)
+2025-04-28 03:33:16,673 - INFO -   Regularizing factor (try 5, alpha=1.00e-01)
+2025-04-28 03:33:17,877 - INFO -   Factor is positive definite (alpha=1.00e+00)
+factor_filename /home/jovyan/shares/SR004.nfs2/chekalina/FisherKronecker/grads_output/llama-2-7b-chat/fisher_factors_output_1404/model_layers_28_self_attn_k_proj.safetensors True
+Layer: model.layers.28.self_attn.k_proj | Ratio: 0.300 -> Target Rank: 616 (Align: 8)
+layer module Linear(in_features=4096, out_features=4096, bias=False)
+factorize_layer_kron_svd
+Regularizing factors for layer (initial alpha=1.00e-05)...
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Regularizing factor (try 1, alpha=1.00e-05)
+  Regularizing factor (try 2, alpha=1.00e-04)
+  Regularizing factor (try 3, alpha=1.00e-03)
+  Regularizing factor (try 4, alpha=1.00e-02)
+  Regularizing factor (try 5, alpha=1.00e-01)
+  Factor is positive definite (alpha=1.00e+00)
+  Cholesky decomposition successful.
+  Performing SVD on transformed matrix (4096x4096)...
+  SVD complete. Singular values (top 5): [1.3403688e-05 6.0787293e-06 5.6532840e-06 5.4129196e-06 5.2258588e-06]
+  Cholesky factor inverses computed.
+  Factorization complete for layer. New shapes: (616,4096), (4096,616)
+factorized_sequential Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)
+2025-04-28 03:33:46,039 - INFO - factorized_sequential 'Sequential(
+  (0): Linear(in_features=4096, out_features=616, bias=False)
+  (1): Linear(in_features=616, out_features=4096, bias=False)
+)')
+2025-04-28 03:33:46,039 - INFO - Replacing 'model.layers.28.self_attn.k_proj' (attribute 'k_proj' within parent LlamaAttention)
+Compressing Layers:  88%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                    | 198/225 [44:32<04:33, 10.12s/it]2025-04-28 03:33:46,039 - INFO - Skipping layer model.layers.28.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,039 - INFO - Skipping layer model.layers.28.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,039 - INFO - Skipping layer model.layers.28.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,039 - INFO - Skipping layer model.layers.28.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,039 - INFO - Skipping layer model.layers.28.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,039 - INFO - Skipping layer model.layers.29.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,039 - INFO - Skipping layer model.layers.29.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,039 - INFO - Skipping layer model.layers.29.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,039 - INFO - Skipping layer model.layers.29.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer model.layers.29.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer model.layers.29.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer model.layers.29.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer model.layers.30.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer model.layers.30.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer model.layers.30.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer model.layers.30.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer model.layers.30.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer model.layers.30.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer model.layers.30.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer model.layers.31.self_attn.q_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer model.layers.31.self_attn.k_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer model.layers.31.self_attn.v_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer model.layers.31.self_attn.o_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer model.layers.31.mlp.gate_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer model.layers.31.mlp.up_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer model.layers.31.mlp.down_proj: Sensitivity ratio >= 1.0 (1.00). No compression.
+2025-04-28 03:33:46,040 - INFO - Skipping layer lm_head: Sensitivity ratio >= 1.0 (1.00). No compression.
+Compressing Layers: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 225/225 [44:32<00:00, 11.88s/it]
+2025-04-28 03:33:46,040 - INFO - Compression finished. Processed: 52, Skipped (Ratio>=1 or No Sensitivity/Factors): 173, Failed: 0
+2025-04-28 03:33:46,042 - INFO - Total parameters after compression: 5891637248
+2025-04-28 03:33:46,042 - INFO - C rate : 0.8743356871622209
+2025-04-28 03:33:46,042 - INFO - Saving compressed model to ./llama10
+2025-04-28 03:33:46,042 - INFO - Compressed model and tokenizer saved.
+2025-04-28 03:33:46,051 - INFO - Evaluating on wikitext2
+Evaluating:   0%|                                                                                                                                                                                          | 0/21 [00:00<?, ?it/s]Evaluating:   5%|████████▍                                                                                                                                                                         | 1/21 [00:05<01:45,  5.28s/it]Evaluating:  10%|████████████████▉                                                                                                                                                                 | 2/21 [00:06<00:53,  2.83s/it]Evaluating:  14%|█████████████████████████▍                                                                                                                                                        | 3/21 [00:07<00:36,  2.05s/it]Evaluating:  19%|█████████████████████████████████▉                                                                                                                                                | 4/21 [00:08<00:28,  1.68s/it]Evaluating:  24%|██████████████████████████████████████████▍                                                                                                                                       | 5/21 [00:09<00:23,  1.48s/it]Evaluating:  29%|██████████████████████████████████████████████████▊                                                                                                                               | 6/21 [00:10<00:20,  1.36s/it]Evaluating:  33%|███████████████████████████████████████████████████████████▎                                                                                                                      | 7/21 [00:12<00:17,  1.28s/it]Evaluating:  38%|███████████████████████████████████████████████████████████████████▊                                                                                                              | 8/21 [00:13<00:15,  1.23s/it]Evaluating:  43%|████████████████████████████████████████████████████████████████████████████▎                                                                                                     | 9/21 [00:14<00:14,  1.20s/it]Evaluating:  48%|████████████████████████████████████████████████████████████████████████████████████▎                                                                                            | 10/21 [00:15<00:12,  1.17s/it]Evaluating:  52%|████████████████████████████████████████████████████████████████████████████████████████████▋                                                                                    | 11/21 [00:16<00:11,  1.16s/it]Evaluating:  57%|█████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                                           | 12/21 [00:17<00:10,  1.15s/it]Evaluating:  62%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                   | 13/21 [00:18<00:09,  1.14s/it]Evaluating:  67%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                           | 14/21 [00:19<00:07,  1.13s/it]Evaluating:  71%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                  | 15/21 [00:20<00:06,  1.13s/it]Evaluating:  76%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                          | 16/21 [00:22<00:05,  1.13s/it]Evaluating:  81%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                 | 17/21 [00:23<00:04,  1.13s/it]Evaluating:  86%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                         | 18/21 [00:24<00:03,  1.12s/it]Evaluating:  90%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                | 19/21 [00:25<00:02,  1.18s/it]Evaluating:  95%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌        | 20/21 [00:26<00:01,  1.16s/it]Evaluating: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [00:27<00:00,  1.07s/it]Evaluating: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [00:27<00:00,  1.32s/it]
+2025-04-28 03:34:21,000 - INFO - wikitext2 perplexity: 9.6250
+2025-04-28 03:34:21,000 - INFO - Evaluating on ptb
+nlls.shape torch.Size([16376])
+Mean NLL: 2.265625
+Evaluating:   0%|                                                                                                                                                                                           | 0/7 [00:00<?, ?it/s]Evaluating:  14%|█████████████████████████▌                                                                                                                                                         | 1/7 [00:01<00:06,  1.12s/it]Evaluating:  29%|███████████████████████████████████████████████████▏                                                                                                                               | 2/7 [00:02<00:05,  1.12s/it]Evaluating:  43%|████████████████████████████████████████████████████████████████████████████▋                                                                                                      | 3/7 [00:03<00:04,  1.12s/it]Evaluating:  57%|██████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                                            | 4/7 [00:04<00:03,  1.12s/it]Evaluating:  71%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                   | 5/7 [00:05<00:02,  1.12s/it]Evaluating:  86%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                         | 6/7 [00:06<00:01,  1.12s/it]Evaluating: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:07<00:00,  1.08s/it]Evaluating: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:07<00:00,  1.10s/it]
+2025-04-28 03:34:30,664 - INFO - ptb perplexity: 112.0000
+2025-04-28 03:34:30,664 - INFO - Evaluation results:
+2025-04-28 03:34:30,664 - INFO -   wikitext2: 9.6250
+2025-04-28 03:34:30,664 - INFO -   ptb: 112.0000
+nlls.shape torch.Size([16376])
+Mean NLL: 4.71875
