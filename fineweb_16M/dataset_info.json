@@ -1,0 +1,235 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "fineweb",
+  "dataset_size": 51056355398,
+  "description": "",
+  "download_checksums": {
+    "/workspace-SR004.nfs2/data/fineweb/sample/10BT/000_00000.parquet": {
+      "num_bytes": 2147292183,
+      "checksum": null
+    },
+    "/workspace-SR004.nfs2/data/fineweb/sample/10BT/001_00000.parquet": {
+      "num_bytes": 2146714409,
+      "checksum": null
+    },
+    "/workspace-SR004.nfs2/data/fineweb/sample/10BT/002_00000.parquet": {
+      "num_bytes": 2148105492,
+      "checksum": null
+    },
+    "/workspace-SR004.nfs2/data/fineweb/sample/10BT/003_00000.parquet": {
+      "num_bytes": 2147060562,
+      "checksum": null
+    },
+    "/workspace-SR004.nfs2/data/fineweb/sample/10BT/004_00000.parquet": {
+      "num_bytes": 2146566804,
+      "checksum": null
+    },
+    "/workspace-SR004.nfs2/data/fineweb/sample/10BT/005_00000.parquet": {
+      "num_bytes": 2146969492,
+      "checksum": null
+    },
+    "/workspace-SR004.nfs2/data/fineweb/sample/10BT/006_00000.parquet": {
+      "num_bytes": 2147298995,
+      "checksum": null
+    },
+    "/workspace-SR004.nfs2/data/fineweb/sample/10BT/007_00000.parquet": {
+      "num_bytes": 2148002325,
+      "checksum": null
+    },
+    "/workspace-SR004.nfs2/data/fineweb/sample/10BT/008_00000.parquet": {
+      "num_bytes": 2147398331,
+      "checksum": null
+    },
+    "/workspace-SR004.nfs2/data/fineweb/sample/10BT/009_00000.parquet": {
+      "num_bytes": 2148338231,
+      "checksum": null
+    },
+    "/workspace-SR004.nfs2/data/fineweb/sample/10BT/010_00000.parquet": {
+      "num_bytes": 2147655539,
+      "checksum": null
+    },
+    "/workspace-SR004.nfs2/data/fineweb/sample/10BT/011_00000.parquet": {
+      "num_bytes": 2147091724,
+      "checksum": null
+    },
+    "/workspace-SR004.nfs2/data/fineweb/sample/10BT/012_00000.parquet": {
+      "num_bytes": 2147653017,
+      "checksum": null
+    },
+    "/workspace-SR004.nfs2/data/fineweb/sample/10BT/013_00000.parquet": {
+      "num_bytes": 2148275619,
+      "checksum": null
+    },
+    "/workspace-SR004.nfs2/data/fineweb/sample/10BT/014_00000.parquet": {
+      "num_bytes": 574962194,
+      "checksum": null
+    }
+  },
+  "download_size": 30639384917,
+  "features": {
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "dump": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "url": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "date": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "file_path": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "language": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "language_score": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "token_count": {
+      "dtype": "int64",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 81695740315,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 51056355398,
+      "num_examples": 14868862,
+      "shard_lengths": [
+        145933,
+        146946,
+        146937,
+        148944,
+        146932,
+        146945,
+        147951,
+        147952,
+        147938,
+        146944,
+        146944,
+        146956,
+        145948,
+        146937,
+        34989,
+        147943,
+        145948,
+        145949,
+        146964,
+        146944,
+        146946,
+        147941,
+        147951,
+        147959,
+        145947,
+        147936,
+        146943,
+        146948,
+        144924,
+        35991,
+        145934,
+        145935,
+        144958,
+        144958,
+        145948,
+        146945,
+        146950,
+        146938,
+        146942,
+        147943,
+        146958,
+        145966,
+        145952,
+        146958,
+        37989,
+        146956,
+        144957,
+        146963,
+        146952,
+        144945,
+        147946,
+        146950,
+        145948,
+        146945,
+        144952,
+        146952,
+        144965,
+        146942,
+        145952,
+        38985,
+        144958,
+        146945,
+        144950,
+        143947,
+        144948,
+        144950,
+        144948,
+        144944,
+        145942,
+        145939,
+        144960,
+        146948,
+        144955,
+        142953,
+        40993,
+        143955,
+        144957,
+        143959,
+        144952,
+        144959,
+        144966,
+        145957,
+        143976,
+        144967,
+        143965,
+        144964,
+        143972,
+        143950,
+        144964,
+        44989,
+        144962,
+        145954,
+        144954,
+        143973,
+        145965,
+        144960,
+        143955,
+        144955,
+        146963,
+        146967,
+        146965,
+        146963,
+        147968,
+        147965,
+        37983,
+        147971,
+        133693
+      ],
+      "dataset_name": "fineweb"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

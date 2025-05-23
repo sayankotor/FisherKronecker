@@ -166,3 +166,5 @@ cython_debug/
 data/
 *_output/*
 wandb*
+**/*.ipynb
+*.ipynb
