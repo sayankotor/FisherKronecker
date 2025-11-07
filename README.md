@@ -2,6 +2,8 @@
 
 This repository contains source code to reproduce results of the paper Generalized Fisher-Weighted SVD.
 
+We leverage Kronecker-factored Hessian decomposition to capture second-order loss surface information, which we subsequently apply to structural pruning (SVD decomposition of layers) for LLM compression.
+
 ## BERT compression
 
 1. To collect calibrating gradients on a specific task while fine-tuning the model, use
